@@ -26,9 +26,8 @@ export const WhyChooseUs = () => {
           className={`relative w-full lg:w-1/2 h-[600px] lg:h-full xl:rounded-l-lg overflow-hidden`}
         >
           <Picture
-            webp="/imgs/pruning.webp"
-            src="/imgs/pruning.jpg"
-            alt="Man pruning tree"
+            src="/imgs/chooseus.JPG"
+            alt="Beauty treatment"
             className="object-cover w-full h-full"  
           />
           <QuoteCard

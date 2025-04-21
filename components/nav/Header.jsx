@@ -32,11 +32,11 @@ const Header = ({ setOverlay }) => {
             duration={300}
             href="/#home"
           >
-            <img
-              src="/Logos/Logo-text-dark.png"
-              alt="logo"
-              className="h-[40px] w-[160px] cursor-pointer"
-            />
+            <div className="flex items-center group">
+              <span className="text-white text-2xl font-light tracking-widest">RHIJ</span>
+              <span className="text-white text-2xl font-extralight tracking-wider ml-1">AESTHETICS</span>
+              <div className="h-4 w-4 rounded-full bg-white/70 ml-2 shadow-glow group-hover:scale-110 transition-transform duration-300"></div>
+            </div>
           </Link>
           <div className="flex flex-row items-center gap-12">
             <nav className="hidden lg:flex">
@@ -48,7 +48,7 @@ const Header = ({ setOverlay }) => {
                       to={path}
                       spy
                       smooth
-                      offset={path === 'contact' && !isDesktop ? 600 : isDesktop ? 0 : -90}
+                      offset={path === 'testimonials' && !isDesktop ? 600 : isDesktop ? 0 : -90}
                       duration={300}
                       key={name}
                       href={`/#${path}`}
@@ -63,20 +63,16 @@ const Header = ({ setOverlay }) => {
             </nav>
             <div className="flex flex-row gap-12 items-center">
 
-              <Link
-                activeClass="active"
-                to="contact"
-                spy
-                smooth
-                offset={0}
-                duration={300}
-                href="/#contact"
-                aria-label="Get a free quote"
+              <a
+                href="https://book.carepatron.com/Rhij-Aesthetics-and-Skin-Care/Rhij?p=PKRmBx5QS4CLC2nWnCR2Jg&s=Q7znKVgM"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book now"
               >
                 <button type="button" className="hidden md:flex font-bold text-palette-5 text-[12px] sm:text-[14px] px-8 py-4 border-[1px] border-palette-5 rounded-full hover:bg-palette-5 hover:text-palette-1/[.85] transition duration-300">
-                  GET A FREE QUOTE
+                  BOOK NOW
                 </button>
-              </Link>
+              </a>
 
               <div>
                 <SideBar

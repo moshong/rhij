@@ -1,4 +1,3 @@
-import { Link } from 'react-scroll';
 import { useMediaQuery } from 'react-responsive';
 import styles from '../../styles';
 
@@ -14,17 +13,9 @@ const ContactCard = () => {
       />
       <h3 className="text-[22px] sm:text-[28px] font-sans-bold">Ready To Get Started?</h3>
       <p className="text-[16px]">Get in touch today for a free quote and consultation</p>
-      <Link
-        activeClass="active"
-        to="contact"
-        spy
-        smooth
-        offset={!isDesktop ? 600 : isDesktop ? 0 : -90}
-        duration={300}
-        href="/#contact"
-      >
+      <a href="mailto:rhij@rhijaesthetics.com">
         <button type="button" className="font-bold border-[1px] border-white px-6 py-2 rounded-xl hover:bg-white hover:text-palette-2 active:scale-95 transition duration-300">CONTACT US</button>
-      </Link>
+      </a>
     </div>
   );
 };

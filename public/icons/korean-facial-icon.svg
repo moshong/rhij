@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="256" cy="256" r="200" fill="#F9F5FF" stroke="#D5B8FF" stroke-width="4"/>
+  <path d="M246 156C246 150.477 250.477 146 256 146V146C261.523 146 266 150.477 266 156V196C266 201.523 261.523 206 256 206V206C250.477 206 246 201.523 246 196V156Z" fill="#9747FF"/>
+  <path d="M196 246C190.477 246 186 250.477 186 256V256C186 261.523 190.477 266 196 266H336C341.523 266 346 261.523 346 256V256C346 250.477 341.523 246 336 246H196Z" fill="#9747FF"/>
+  <path d="M246 316C246 310.477 250.477 306 256 306V306C261.523 306 266 310.477 266 316V356C266 361.523 261.523 366 256 366V366C250.477 366 246 361.523 246 356V316Z" fill="#9747FF"/>
+  <circle cx="256" cy="256" r="36" fill="#9747FF" fill-opacity="0.2" stroke="#9747FF" stroke-width="6"/>
+  <path d="M216 176C216 176 236 156 256 156C276 156 296 176 296 176" stroke="#9747FF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M216 336C216 336 236 356 256 356C276 356 296 336 296 336" stroke="#9747FF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M176 216C176 216 156 236 156 256C156 276 176 296 176 296" stroke="#9747FF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M336 216C336 216 356 236 356 256C356 276 336 296 336 296" stroke="#9747FF" stroke-width="6" stroke-linecap="round"/>
+</svg>

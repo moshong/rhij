@@ -14,6 +14,7 @@ import BlogCard from './BlogCard';
 import BackToTop from './BackToTop';
 import Footer from './nav/Footer';
 import Picture from './Picture';
+import Preloader from './Preloader';
 
 export {
   Header,
@@ -33,4 +34,5 @@ export {
   BackToTop,
   Footer,
   Picture,
+  Preloader,
 };

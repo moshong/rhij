@@ -23,13 +23,13 @@ const About = () => {
             className='relative z-50 h-[600px] xl:h-[700px] 2xl:h-[800px]'
           >
             <Picture
-              webp="/imgs/hedge-trimming-2.webp"
-              src="/imgs/hedge-trimming-2.jpg"
-              alt="2 men trimming hedge"
+              webp="/imgs/about-sc.png"
+              src="/imgs/about-sc.png"
+              alt="About section screenshot"
               className="relative w-full lg:max-w-[400px] xl:max-w-[500px] min-h-[600px] h-full object-cover object-cover z-40 lg:rounded-lg shadow-xl"
             />
             <QuoteCard
-              text="Committed to crafting landscapes with precision and care, fostering connections with nature."
+              text="Dedicated to enhancing your natural beauty with personalized care and premium treatments."
               styles="lg:hidden"
             />
             <div className='hidden lg:block'>
@@ -53,16 +53,15 @@ const About = () => {
 
             <div className='flex flex-col gap-8'>
               <p className={`font-normal text-[16px] leading-7`}>
-                Welcome to <span className=''>By The Sea Landscaping</span>
-                , right here on Sydney's Northern Beaches. We take pride in offering a comprehensive range of lawn care and garden maintenance services to suit any need. Our experienced team of professionals is dedicated to delivering exceptional results that exceed your expectations. From mowing and edging to complete garden make-overs, we’ve got you covered.
+                Welcome to <span className=''>Rhij Aesthetics</span>, your premier beauty destination. We take pride in offering a comprehensive range of beauty and wellness treatments tailored to enhance your natural beauty. Our experienced team of aestheticians is dedicated to delivering exceptional results that exceed your expectations. From facial treatments and massages to nail care and beauty enhancements, we've got your beauty needs covered.
               </p>
 
               <p className={`font-normal text-[16px] leading-7`}>
-                We understand that every project is unique, and will work closely with you to ensure that we deliver tailored solutions that meet your specific needs. We use only the latest equipment and techniques to ensure that your lawn and garden look their best all year round.
+                We understand that every client is unique, and we work closely with you to ensure personalized solutions that address your specific concerns and goals. We use only premium, medical-grade products and the latest techniques to ensure you receive the highest quality care and results that last.
               </p>
 
               <p className={`font-normal text-[16px] leading-7`}>
-                So, whether you're seeking regular maintenance or a one-off landscaping project, we are here to help. Get in touch today for your <span className='font-extrabold'>free quote</span>, and let us show you why we are the landscaping business of choice for so many on Sydney's Northern Beaches.
+                Whether you're seeking a regular beauty regimen or preparing for a special occasion, we are here to help you look and feel your best. Book your appointment today and experience the <span className='font-extrabold'>Rhij difference</span> - where your beauty is our priority and your satisfaction is guaranteed.
               </p>
             </div>
 

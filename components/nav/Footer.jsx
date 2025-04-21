@@ -13,17 +13,12 @@ const Footer = () => {
       <div className="mx-auto flex flex-col gap-8 items-center justify-between">
         <div className="flex flex-row flex-wrap justify-start md:justify-center px-8 py-[50px] lg:py-[100px] gap-[50px] max-w-full md:w-[870px] min-[1650px]:w-full">
           <div className="flex flex-row items-center pb-12 pr-[30px]">
-            <img
-              src="/Logos/Logo-light.svg"
-              alt="logo"
-              className="w-[210px] object-contain"
-              loading="lazy"
-            />
+            <h1 className="text-white text-3xl font-abril tracking-wider">RHIJ AESTHETICS</h1>
           </div>
 
           <div className="flex flex-col gap-8 max-w-full md:max-w-[450px]">
             <h3 className={`${styles.footerHeading}`}>About</h3>
-            <p className="text-white font-lato leading-7 text-palette-5 text-[14px] sm:text-[16px]">Transforming landscapes with precision and care, By The Sea Landscaping is proud to offer comprehensive lawn care and garden maintenance services for your garden. Discover the difference of personalized service and unbeatable prices, get in touch today.</p>
+            <p className="text-white font-lato leading-7 text-palette-5 text-[14px] sm:text-[16px]">At Rhij Aesthetics, we're dedicated to enhancing your natural beauty through personalized treatments and premium care. Our beauty studio offers a tranquil escape where you can relax and rejuvenate. With a focus on quality and attention to detail, we're committed to helping you look and feel your absolute best.</p>
             <div className="flex gap-4">
               {socials.map(({ name, icon, href }) => {
                 const SocialIcon = icon;
@@ -51,7 +46,7 @@ const Footer = () => {
                       to={path}
                       spy
                       smooth
-                      offset={path === 'contact' && !isDesktop ? 600 : isDesktop ? 0 : -90}
+                      offset={path === 'testimonials' && !isDesktop ? 600 : isDesktop ? 0 : -90}
                       duration={300}
                       key={name}
                       href={`/#${path}`}
@@ -119,10 +114,7 @@ const Footer = () => {
         <div className="h-[1px] w-full bg-palette-3 opacity-50" />
 
         <p className="text-white px-4 pb-8 text-[12px] sm:text-[14px] text-center">
-          © Copyright By The Sea Landscaping 2023 | Website by
-          <a href="mailto:tom.odonovan01@gmail.com" className="font-bold px-1 cursor-pointer">
-            Tom O'Donovan
-          </a>
+          © Copyright Rhij Aesthetics 2025 | All Rights Reserved
         </p>
       </div>
     </footer>

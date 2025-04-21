@@ -18,139 +18,143 @@ export const navbar = [
     name: 'Services',
     path: 'services',
   },
-  // {
-  //   name: 'Gallery',
-  //   path: 'gallery',
-  // },
-  // {
-  //   name: 'Blog',
-  //   path: 'blog',
-  // },
   {
-    name: 'Contact',
-    path: 'contact',
+    name: 'Gallery',
+    path: 'gallery',
+  },
+  {
+    name: 'Testimonials',
+    path: 'testimonials',
   },
 ]
 
 export const heroBtns = [
   {
-    name: 'Learn More',
-    path: 'about',
+    name: 'Our Treatments',
+    path: 'services',
   },
   {
-    name: 'Contact Us',
-    path: 'contact',
+    name: 'Book Now',
+    path: 'https://book.carepatron.com/Rhij-Aesthetics-and-Skin-Care/Rhij?p=PKRmBx5QS4CLC2nWnCR2Jg&s=Q7znKVgM',
+    external: true,
   },
 ]
 
 export const services = [
   {
     icon: {
-      img: '/icons/mower-icon.svg',
-      alt: 'Mower Icon',
+      img: '/icons/cleansing-facial-icon.svg',
+      alt: 'Corrective Facial Icon',
     },
-    img: '/imgs/mowing-man-wf',
-    alt: 'Man mowing lawn',
-    subtitle: 'Transform Your Space',
-    title: 'Landscaping Services',
-    text: 'Our landscaping services are designed to transform your outdoor space into a vibrant and well-maintained environment. From precise lawn mowing and edging to removing leaves and tidying up your garden, we pay attention to every detail. \nOur expert team also specializes in mulching and fertilizing to nourish your plants and promote healthy growth. With a focus on enhancing the aesthetic appeal and functionality of your landscape, we create beautiful outdoor spaces you can enjoy year-round.',
+    img: '/imgs/hero-pattern-5',
+    alt: 'Corrective facial treatment',
+    subtitle: 'Customized Treatment',
+    title: 'Corrective Facials',
+    text: 'Our Corrective Facials are personalized treatments designed to address your specific skin concerns. Using clinical-grade products and advanced techniques, these transformative facials target issues like acne, hyperpigmentation, aging, and sensitivity. \nAs a Registered Nurse and board-certified Nurse Practitioner, I combine medical expertise with aesthetic knowledge to deliver results-driven treatments. Each facial includes thorough analysis, deep cleansing, exfoliation, targeted treatment, and hydration to restore your skin\'s health and radiance.',
     tags: [
-      'Lawn Mowing',
-      'Edging',
-      'Mulching',
-      'Fertilizing',
+      'Skin Analysis',
+      'Clinical-Grade Products',
+      'Personalized Care',
+      'Results-Driven',
     ]
   },
   {
     icon: {
-      img: '/icons/trees-icon.svg',
-      alt: 'Trees Icon',
+      img: '/icons/diamond-glow-icon.svg',
+      alt: 'Chemical Peel Icon',
     },
-    img: '/imgs/hedge-trimming',
-    alt: 'Man trimming hedge',
-    subtitle: 'Beautiful Tree Solutions',
-    title: 'Tree and Plant Care',
-    text: 'We understand the importance of proper tree and plant care for a healthy and attractive landscape. Our skilled professionals provide expert hedging services to maintain the shape and density of your hedges. \nWe also offer tree trimming and removal to ensure the safety and beauty of your property. Whether you need regular pruning or assistance with tree removal, we have the knowledge and equipment to handle the task efficiently and safely.',
+    img: '/imgs/chemical-peel',
+    alt: 'Chemical peel facial treatment',
+    subtitle: 'Skin Resurfacing',
+    title: 'Chemical Peels',
+    text: 'Our professional Chemical Peels offer controlled exfoliation to reveal fresher, more youthful skin beneath the surface. These treatments are carefully formulated to address multiple concerns including fine lines, uneven texture, sun damage, and acne scarring. \nUsing various strengths and formulations tailored to your skin type and concerns, our chemical peels stimulate cell renewal and collagen production. With my extensive training across the US, Philippines, and Hong Kong, I provide safe, effective treatments with minimal downtime and maximum results for a smoother, brighter complexion.',
     tags: [
-      'Hedge Trimming',
-      'Tree Trimming',
-      'Tree Removal',
+      'Exfoliation',
+      'Cell Renewal',
+      'Texture Improvement',
+      'Brightness',
     ]
   },
   {
     icon: {
-      img: '/icons/grass-icon.svg',
-      alt: 'Turf Laying Icon',
+      img: '/icons/led-therapy-icon.svg',
+      alt: 'LED Therapy Icon',
     },
-    img: '/imgs/grass-texture',
-    alt: 'Grass close up',
-    subtitle: 'Elevate Your Yard',
-    title: 'Turf Laying',
-    text: 'Achieve a lush and vibrant lawn with our comprehensive turf services. We specialize in prepping and laying turf to create a fresh, even, and vibrant green carpet that enhances the beauty of your outdoor space. \nOur dedicated team ensures proper soil preparation, precise turf installation, and tailored care instructions, giving you a healthy and stunning lawn. With our expertise and attention to detail, we\'ll transform your yard into a picturesque setting that you can enjoy with family and friends.',
+    img: '/imgs/led-treatment',
+    alt: 'Advanced LED therapy treatment',
+    subtitle: 'Light-Based Healing',
+    title: 'Advanced LED Therapy',
+    text: 'Our Advanced LED Therapy harnesses the power of specific light wavelengths to stimulate cellular processes and address various skin concerns without downtime. Different colored lights target specific issues: red light stimulates collagen and reduces inflammation, blue light fights acne-causing bacteria, and yellow light improves skin tone and reduces redness. \nThis cutting-edge, non-invasive treatment can be performed as a standalone service or integrated with other facial treatments to enhance results. As your dedicated skin care professional, I customize each session to your specific needs for optimal skin health and visible improvement.',
     tags: [
-      'Turf Laying',
-      'Turf Preparation',
-      'Turf Care',
+      'Non-Invasive',
+      'Collagen Stimulation',
+      'Acne Treatment',
+      'Skin Rejuvenation',
     ]
   },
   {
     icon: {
-      img: '/icons/care-icon.svg',
-      alt: 'Garden Maintenance Icon',
+      img: '/icons/korean-facial-icon.svg',
+      alt: 'Bespoke Treatment Icon',
     },
-    img: '/imgs/pressure-cleaning',
-    alt: 'Man pressure cleaning',
-    subtitle: 'Maintain Your Oasis',
-    title: 'Garden Maintenance',
-    text: 'Maintaining a well-kept outdoor space requires regular maintenance. Our maintenance services cover essential tasks such as weed control, ensuring that unwanted weeds don\'t compete with your plants for nutrients and space. \nWe also provide pressure washing to revitalize your outdoor surfaces, removing dirt, grime, and stains. Additionally, our pool cleaning service guarantees crystal-clear waters, creating a welcoming and refreshing oasis right in your backyard.',
+    img: '/imgs/bespoke-treatment',
+    alt: 'Bespoke aesthetic treatment',
+    subtitle: 'Tailored Excellence',
+    title: 'Bespoke Aesthetic Treatments',
+    text: 'Our Bespoke Aesthetic Treatments represent the pinnacle of personalized skincare. These comprehensive sessions begin with in-depth consultation and analysis to create a custom protocol addressing your unique skin concerns and goals. \nCombining elements from multiple modalities—including advanced cleansing techniques, specialized masks, targeted serums, and innovative technologies—these treatments deliver exceptional results. As a specialist with extensive training and experience, I continuously update my techniques to incorporate the latest advancements in aesthetic medicine, ensuring you receive world-class care designed specifically for your skin\'s needs.',
     tags: [
-      'Weed Control',
-      'Pressure Washing',
-      'Pool Cleaning',
+      'Custom Protocols',
+      'Multi-Modality',
+      'Expert Analysis',
+      'Premium Experience',
     ]
   }
 ];
 
 export const guarantee = [
   {
-    title: 'Affordable Prices',
-    text: 'We believe that a beautiful garden doesn\'t have to come with a hefty price tag. We offer high quality landscaping services at unbeatable prices.',
+    title: 'Medical Expertise',
+    text: 'As a Registered Nurse and board-certified Nurse Practitioner with over a decade of experience, I bring clinical knowledge and precision to every aesthetic treatment.',
   },
   {
-    title: 'Personalized Service',
-    text: 'We understand that every client is unique. We take the time to understand your preferences and collaborate closely with you throughout the entire process.',
+    title: 'Global Training',
+    text: 'My comprehensive training at prestigious institutions across the US, Philippines, and Hong Kong ensures you receive world-class treatments incorporating the latest advancements in aesthetic medicine.',
   },
   {
-    title: 'Attention to Detail',
-    text: 'We believe that the key to a stunning landscape lies in the details. We pay meticulous attention to every aspect of our work, from the precise edging of your lawn to the careful selection of the right plants and materials for your garden.',
+    title: 'Personalized Care',
+    text: 'Every treatment is meticulously tailored to your unique skin type and concerns. I take the time to understand your aesthetic goals and create customized solutions that deliver exceptional results.',
+  },
+  {
+    title: 'Premium Products',
+    text: 'I use only the highest quality, medical-grade products that are clinically proven to be effective and safe for all skin types, ensuring optimal results for every client.',
   }
 ];
 
-export const latestProjects = [
+export const galleries = [
   {
-    id: 'project-1',
-    imgUrl: '/imgs/projects/unknown-03.jpg',
-    title: 'Narrabeen',
+    id: 'gallery-1',
+    imgUrl: '/imgs/facial.png',
+    title: 'Facials',
   },
   {
-    id: 'project-2',
-    imgUrl: '/imgs/projects/unknown-02.jpg',
-    title: 'Newport',
+    id: 'gallery-2',
+    imgUrl: '/imgs/treat.png',
+    title: 'Treatments',
   },
   {
-    id: 'project-3',
-    imgUrl: '/imgs/projects/elanora-02.jpeg',
-    title: 'Elanora',
+    id: 'gallery-3',
+    imgUrl: '/imgs/results.png',
+    title: 'Results',
   },
   {
-    id: 'project-4',
-    imgUrl: '/imgs/projects/monavale.jpg',
-    title: 'Monavale',
+    id: 'gallery-4',
+    imgUrl: '/imgs/products.png',
+    title: 'Products',
   },
   {
-    id: 'project-5',
-    imgUrl: '/imgs/projects/unknown-01.jpg',
-    title: 'Church Point',
+    id: 'gallery-5',
+    imgUrl: '/imgs/shop.png',
+    title: 'Clinic',
   },
 ];
 
@@ -239,16 +243,44 @@ export const blog = [
   }
 ]
 
+export const testimonials = [
+  {
+    name: "Viktoria Angela",
+    role: "Regular Client",
+    testimonial: "If you need some self-love and skin care treatment, Rhij Aesthetics should be your go to! Rhij is gentle with your skin. I definitely feel relaxed after my session . 100% recommend 💯💯💯."
+  },
+  {
+    name: "Muriel Miller",
+    role: "First-time Client",
+    testimonial: "Rhij is the best and only aesthetician I trust with my skin. She’s very knowledgeable in her craft! Her Korean and Diamond Glow treatments are a must-try, leaving my skin dewy and healthy-looking! I felt very relaxed and rejuvenated during the entire experience."
+  },
+  {
+    name: "Livia Mettler ",
+    role: "Monthly Member",
+    testimonial: "I felt extremely rejuvenated and refreshed getting a diamond facial!! Cannot wait to come back!!"
+  },
+  {
+    name: "Dianne Urot",
+    role: "Special Occasion Client",
+    testimonial: "I tried the Korean Facial Glow facial last weekend and it was the best thing! Rhij was very thorough with the steps, guiding me and educating on what will happen which I appreciate. She is also very gentle which makes the facial very calming and relaxing 💕"
+  },
+  {
+    name: "Pat Cupay ",
+    role: "Loyal Client",
+    testimonial: "Professional and knowledgeable about services and products! Any questions or concerns you have will be acknowledged and answered to your satisfaction. I got the Diamond Glow Facial with Jelly Mask and LED Light and was satisfied with the process and the result and could feel the difference with my skin. I would definitely come back again and 100% recommend Rhij Aesthetics LLC! 🙌🏼"
+  }
+];
+
 export const socials = [
   {
     name: 'instagram',
     icon: BsInstagram,
-    href: 'https://www.instagram.com/bythesealandscaping/',
+    href: 'https://www.instagram.com/rhij.aesthetics/',
   },
   {
     name: 'facebook',
     icon: FaFacebookF,
-    href: 'https://www.facebook.com/bythesealandscapes',
+    href: 'https://www.facebook.com/rhijaesthetics',
   },
   {
     name: 'linkedin',
@@ -258,7 +290,7 @@ export const socials = [
   {
     name: 'email',
     icon: MdEmail,
-    href: 'mailto:bythesealandscapes@gmail.com'
+    href: 'mailto:rhij@rhijaesthetics.com'
   }
 ];
 
@@ -266,19 +298,19 @@ export const contact = [
   {
     name: 'location',
     icon: TiLocation,
-    content: 'Northern Beaches, Sydney',
+    content: 'Rhij Aesthetics and Skin Care, Suite 105',
     url: 'https://goo.gl/maps/uWJAxEnVrjFuUeSH7'
   },
   {
     name: 'email',
     icon: MdEmail,
-    content: 'bythesealandscapes@gmail.com',
-    url: 'mailto:bythesealandscapes@gmail.com'
+    content: 'rhij@rhijaesthetics.com',
+    url: 'mailto:rhij@rhijaesthetics.com'
   },
   {
     name: 'phone',
     icon: FaPhoneAlt,
-    content: '0439 439 391',
-    url: 'tel:0439439391'
+    content: '(555) 123-4567',
+    url: 'tel:5551234567'
   }
 ];

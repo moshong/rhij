@@ -6,7 +6,7 @@ import Explore from './Explore';
 import Blog from './Blog';
 import FollowUs from './FollowUs';
 import Reviews from './Reviews';
-import GetInTouch from './GetInTouch';
+import Testimonials from './Testimonials';
 
 export {
   Hero,
@@ -17,5 +17,5 @@ export {
   Blog,
   FollowUs,
   Reviews,
-  GetInTouch,
+  Testimonials,
 };

@@ -23,16 +23,16 @@ module.exports = {
         'short': { 'raw': '(max-height: 750px)' },
       },
       gradientColorStops: {
-        'white-green': ['#FFFFFF', '#3CAB80']
+        'white-pink': ['#FFFFFF', '#FFB6C1']
       },
       colors: {
         'primary-black': '#1A232E',
         'secondary-white': '#c7c7c7',
-        'palette-1': '#1C6758',
-        'palette-2': '#3CAB80',
-        'palette-3': '#90C8AC',
-        'palette-4': '#ECE9D5',
-        'palette-5': '#F8FAF0',
+        'palette-1': '#FF9A8B', // peach
+        'palette-2': '#FFB6C1', // pink
+        'palette-3': '#FFC3A0', // light peach
+        'palette-4': '#F5E1DA', // beige
+        'palette-5': '#FFF6F0', // light beige/cream
       },
       transitionTimingFunction: {
         'out-flex': 'cubic-bezier(0.05, 0.6, 0.4, 0.9)',
@@ -42,12 +42,17 @@ module.exports = {
         roboto: ['Roboto', 'Arial', 'sans-serif'],
         lato: ['Lato', 'Arial', 'sans-serif'],
         abril: ['Abril Fatface', 'Arial', 'cursive'],
+        playfair: ['Playfair Display', 'serif'],
+        dancing: ['Dancing Script', 'cursive'],
       },
      backgroundImage: {
        'hero-pattern': ["url('/imgs/hero-pattern-5.webp')", "url('/imgs/hero-pattern-5.png')"],
        'hero-cover': ["url('/imgs/mowing-man.webp')", "url('/imgs/mowing-man.jpg')"],
        'about': ["url('/imgs/hedge-trimming-2.webp')", "url('/imgs/hedge-trimming-2.jpg')"],
        'contact': ["url('/imgs/contact-bg.webp')", "url('/imgs/contact-bg.jpg')"],
+      },
+      boxShadow: {
+        'glow': '0 0 8px 2px rgba(255, 255, 255, 0.3)',
       },
     },
     borderWidth: {

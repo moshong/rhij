@@ -31,12 +31,11 @@ const SideBar = ({ active, handleClick }) => {
             duration={300}
             href="/#home"
           >
-            <img
-              src="/Logos/Logo-dark.svg"
-              alt="logo"
-              className="relative w-[200px] h-[120px] cursor-pointer"
-              loading="lazy"
-            />
+            <div className="flex items-center py-4">
+              <span className="text-palette-1 text-2xl font-light tracking-widest">RHIJ</span>
+              <span className="text-palette-2 text-2xl font-extralight tracking-wider ml-1">AESTHETICS</span>
+              <div className="h-4 w-4 rounded-full bg-palette-2/70 ml-2"></div>
+            </div>
           </Link>
         </div>
         <nav>
@@ -49,7 +48,7 @@ const SideBar = ({ active, handleClick }) => {
                   to={path}
                   spy
                   smooth
-                  offset={path === 'contact' && !isDesktop ? 600 : isDesktop ? 0 : -90}
+                  offset={path === 'testimonials' && !isDesktop ? 600 : isDesktop ? 0 : -90}
                   duration={300}
                   key={name}
                   href={`/#${path}`}
@@ -67,9 +66,14 @@ const SideBar = ({ active, handleClick }) => {
         <div className="flex flex-row gap-6 justify-center items-center">
           <FaPhoneAlt className="w-[30px] h-[30px] text-palette-1" />
           <div>
-            <h4>Call Today</h4>
-            <a href="tel://+61439439391">
-              <p className="text-xl font-bold hover:text-palette-2 transition duration-300">0439 439 391</p>
+            <h4>Book Now</h4>
+            <a 
+              href="https://book.carepatron.com/Rhij-Aesthetics-and-Skin-Care/Rhij?p=PKRmBx5QS4CLC2nWnCR2Jg&s=Q7znKVgM"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl font-bold hover:text-palette-2 transition duration-300"
+            >
+              Click Here
             </a>
           </div>
         </div>

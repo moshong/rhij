@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="256" cy="256" r="200" fill="#F0FEFF" stroke="#7FE9FF" stroke-width="4"/>
+  <circle cx="256" cy="256" r="100" fill="#00B8D9" fill-opacity="0.1" stroke="#00B8D9" stroke-width="6"/>
+  <path d="M256 140V176" stroke="#00B8D9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M256 336V372" stroke="#00B8D9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M372 256H336" stroke="#00B8D9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M176 256H140" stroke="#00B8D9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M337.78 174.22L311.5 200.5" stroke="#00B8D9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M200.5 311.5L174.22 337.78" stroke="#00B8D9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M337.78 337.78L311.5 311.5" stroke="#00B8D9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M200.5 200.5L174.22 174.22" stroke="#00B8D9" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="256" cy="256" r="40" fill="#00B8D9" fill-opacity="0.5"/>
+  <circle cx="256" cy="256" r="15" fill="#00B8D9"/>
+</svg>
