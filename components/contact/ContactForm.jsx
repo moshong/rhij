@@ -10,6 +10,7 @@ import styles from '../../styles';
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [apiError, setApiError] = useState('');
 
   const { values, errors, touched, isSubmitting, isValid, handleChange, handleSubmit } = useFormik({
     initialValues: {
@@ -21,13 +22,17 @@ const ContactForm = () => {
     },
     onSubmit: async (formValues, actions) => {
       actions.setSubmitting(true);
+      setApiError(''); // Clear any previous errors
+      
       try {
         await sendContactForm(values);
         actions.setSubmitting(false);
         setSubmitted(true);
         actions.resetForm();
       } catch (error) {
-        console.error('An error has occured', error);
+        console.error('An error has occurred', error);
+        setApiError(error.message || 'Failed to send message. Please try again later.');
+        actions.setSubmitting(false);
       }
     },
     validationSchema: Yup.object({
@@ -36,7 +41,7 @@ const ContactForm = () => {
         .required('Required'),
       email: Yup
         .string()
-        .email('Please enter a vaild email')
+        .email('Please enter a valid email')
         .required('Required'),
       suburb: Yup
         .string()
@@ -93,6 +98,14 @@ const ContactForm = () => {
             <MdError size={30} />
             <p>Please fill in the required fields.</p>
           </div>
+
+          {/* API error message */}
+          {apiError && (
+            <div className="flex flex-row gap-4 mt-6 mb-0 p-4 bg-red-100/60 border-[1px] border-pink-500 text-pink-500 rounded-lg">
+              <MdError size={30} />
+              <p>{apiError}</p>
+            </div>
+          )}
 
           <form
             method="POST"

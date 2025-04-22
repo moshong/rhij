@@ -34,7 +34,7 @@ const SideBar = ({ active, handleClick }) => {
             <div className="flex items-center py-4">
               <span className="text-palette-1 text-2xl font-light tracking-widest">RHIJ</span>
               <span className="text-palette-2 text-2xl font-extralight tracking-wider ml-1">AESTHETICS</span>
-              <div className="h-4 w-4 rounded-full bg-palette-2/70 ml-2"></div>
+              <div className="h-4 w-4 rounded-full bg-palette-2/70 ml-2" />
             </div>
           </Link>
         </div>

@@ -17,7 +17,7 @@ const ServicesCard = ({ index, service, active, handleClick }) => (
         <img
           src={service.icon.img}
           alt={service.icon.alt}
-          className="w-[70px] h-[70px] object-contain"
+          className="w-[70px] h-[70px] object-cover rounded-full"
           loading="lazy"
         />
         <p className="min-w-[160px]">{service.title}</p>

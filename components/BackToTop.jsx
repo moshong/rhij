@@ -1,7 +1,10 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BsArrowUp } from 'react-icons/bs';
 import { motion, AnimatePresence } from 'framer-motion';
 import { animateOnScroll } from '../utils/motion';
+
+// Custom hook that uses useEffect instead of useLayoutEffect for SSR compatibility
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useEffect : useEffect;
 
 const BackToTop = ({ pageRef }) => {
   const diameter = 50;
@@ -12,10 +15,10 @@ const BackToTop = ({ pageRef }) => {
   const [progress, setProgress] = useState(0);
   const position = Math.max(1 - progress, 0);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (typeof window !== 'undefined') {
       const updateHeight = () => {
-        if (!pageRef.current) return;
+        if (!pageRef?.current) return;
         const { height } = pageRef.current.getBoundingClientRect();
         setProgress(window.scrollY / (height - window.innerHeight));
       };
@@ -27,7 +30,7 @@ const BackToTop = ({ pageRef }) => {
         window.removeEventListener('scroll', updateHeight);
       };
     }
-  }, []);
+  }, [pageRef]);
 
   const scrollToTop = () => {
     document.documentElement.scrollTo({

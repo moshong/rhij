@@ -22,9 +22,9 @@ const Preloader = () => {
       opacity: 0,
       transition: { 
         duration: 0.8,
-        ease: "easeInOut" 
-      }
-    }
+        ease: 'easeInOut',
+      },
+    },
   };
 
   const logoVariants = {
@@ -35,9 +35,9 @@ const Preloader = () => {
       rotateY: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+        ease: 'easeOut',
+      },
+    },
   };
 
   const textVariants = {
@@ -48,9 +48,9 @@ const Preloader = () => {
       transition: {
         delay: 0.6,
         duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+        ease: 'easeOut',
+      },
+    },
   };
 
   const shineVariants = {
@@ -60,11 +60,11 @@ const Preloader = () => {
       opacity: 0.8,
       transition: {
         repeat: Infinity,
-        repeatType: "mirror",
+        repeatType: 'mirror',
         duration: 1.5,
-        ease: "easeInOut"
-      }
-    }
+        ease: 'easeInOut',
+      },
+    },
   };
 
   // If not loading, don't render the preloader
@@ -90,7 +90,7 @@ const Preloader = () => {
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
-                animation: `float ${2 + Math.random() * 3}s infinite ease-in-out ${Math.random() * 2}s`
+                animation: `float ${2 + Math.random() * 3}s infinite ease-in-out ${Math.random() * 2}s`,
               }}
             />
           ))}
@@ -111,16 +111,16 @@ const Preloader = () => {
             <div className="w-56 h-56 rounded-full bg-white shadow-[0_0_50px_rgba(255,255,255,0.8)] flex items-center justify-center" 
               style={{
                 transform: 'translateZ(20px)',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.2), inset 0 5px 10px rgba(255,255,255,0.5)'
+                boxShadow: '0 10px 30px rgba(0,0,0,0.2), inset 0 5px 10px rgba(255,255,255,0.5)',
               }}
             >
               <div className="w-48 h-48 rounded-full bg-palette-1 flex items-center justify-center transform hover:scale-105 duration-500 relative overflow-hidden"
                 style={{
-                  boxShadow: 'inset 0 5px 15px rgba(255,255,255,0.5), inset 0 -5px 15px rgba(0,0,0,0.2)'
+                  boxShadow: 'inset 0 5px 15px rgba(255,255,255,0.5), inset 0 -5px 15px rgba(0,0,0,0.2)',
                 }}
               >
                 {/* 3D effect layers */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent" />
                 
                 {/* Shine effect */}
                 <motion.div 
@@ -128,9 +128,9 @@ const Preloader = () => {
                   variants={shineVariants}
                   initial="initial"
                   animate="animate"
-                ></motion.div>
+                />
                 
-                <div className="absolute bottom-0 right-0 w-full h-1/2 bg-black/10 transform skew-x-12"></div>
+                <div className="absolute bottom-0 right-0 w-full h-1/2 bg-black/10 transform skew-x-12" />
                 
                 {/* Logo text */}
                 <div className="font-dancing font-bold text-7xl text-white tracking-wider transform -rotate-6"
@@ -144,12 +144,12 @@ const Preloader = () => {
           
           {/* Outer rotating ring */}
           <div className="absolute inset-0 flex items-center justify-center animate-[spin_6s_linear_infinite]">
-            <div className="w-60 h-60 rounded-full border-2 border-dashed border-palette-3/70"></div>
+            <div className="w-60 h-60 rounded-full border-2 border-dashed border-palette-3/70" />
           </div>
           
           {/* Second rotating ring (opposite direction) */}
           <div className="absolute inset-0 flex items-center justify-center animate-[spin_8s_linear_infinite_reverse]">
-            <div className="w-52 h-52 rounded-full border-1 border-dotted border-white/50"></div>
+            <div className="w-52 h-52 rounded-full border-1 border-dotted border-white/50" />
           </div>
         </motion.div>
         
@@ -162,7 +162,7 @@ const Preloader = () => {
         >
           <h1 className="font-dancing font-bold text-5xl text-white mb-2"
             style={{
-              textShadow: '0 2px 10px rgba(0,0,0,0.2)'
+              textShadow: '0 2px 10px rgba(0,0,0,0.2)',
             }}
           >Rhij Aesthetics</h1>
           <p className="font-playfair text-white/90 text-lg">Where beauty is our priority</p>
@@ -175,16 +175,16 @@ const Preloader = () => {
                 initial={{ width: 0 }}
                 animate={{ 
                   width: '100%',
-                  transition: { duration: 3, ease: "easeInOut" }
+                  transition: { duration: 3, ease: 'easeInOut' },
                 }}
-              ></motion.div>
+              />
             </div>
           </div>
         </motion.div>
       </div>
       
       {/* Add custom CSS for floating animation */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0%, 100% { transform: translateY(0) scale(0.8); opacity: 0.5; }
           50% { transform: translateY(-20px) scale(1); opacity: 0.9; }

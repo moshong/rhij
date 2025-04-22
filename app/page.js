@@ -1,9 +1,13 @@
 'use client';
 
-import { Header, Footer, BackToTop, Preloader } from '../components';
+import { Header, Footer, Preloader } from '../components';
 import { Hero, About, Services, Explore, WhyChooseUs, Blog, Reviews, FollowUs, Testimonials } from '../sections';
 import { useState, useRef, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
+import dynamic from 'next/dynamic';
+
+// Dynamically import BackToTop with SSR disabled
+const BackToTop = dynamic(() => import('../components/BackToTop'), { ssr: false });
 
 const Page = () => {
   const pageRef = useRef();
