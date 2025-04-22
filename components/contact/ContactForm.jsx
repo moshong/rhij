@@ -23,7 +23,7 @@ const ContactForm = () => {
     onSubmit: async (formValues, actions) => {
       actions.setSubmitting(true);
       setApiError(''); // Clear any previous errors
-      
+
       try {
         await sendContactForm(values);
         actions.setSubmitting(false);

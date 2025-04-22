@@ -184,7 +184,7 @@ const Preloader = () => {
       </div>
       
       {/* Add custom CSS for floating animation */}
-      <style jsx="true" global="true">{`
+      <style jsx={true} global={true}>{`
         @keyframes float {
           0%, 100% { transform: translateY(0) scale(0.8); opacity: 0.5; }
           50% { transform: translateY(-20px) scale(1); opacity: 0.9; }

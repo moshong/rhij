@@ -134,7 +134,7 @@ const handler = async (req, res) => {
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   const now = Date.now();
   const requestHistory = requestTimes.get(ip) || [];
-  const recentRequests = requestHistory.filter(time => now - time < RATE_LIMIT_WINDOW);
+  const recentRequests = requestHistory.filter((time) => now - time < RATE_LIMIT_WINDOW);
   
   if (recentRequests.length >= MAX_REQUESTS_PER_WINDOW) {
     return res.status(429).json({ message: 'Too many requests, please try again later' });
