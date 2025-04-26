@@ -100,7 +100,7 @@ export const services = [
     img: '/imgs/bespoke-treatment',
     alt: 'Bespoke aesthetic treatment',
     subtitle: 'Tailored Excellence',
-    title: 'Korean Luxuty Facial',
+    title: 'Korean Luxury Facial',
     text: 'Our Bespoke Aesthetic Treatments represent the pinnacle of personalized skincare. These comprehensive sessions begin with in-depth consultation and analysis to create a custom protocol addressing your unique skin concerns and goals. \nCombining elements from multiple modalities—including advanced cleansing techniques, specialized masks, targeted serums, and innovative technologies—these treatments deliver exceptional results. As a specialist with extensive training and experience, I continuously update my techniques to incorporate the latest advancements in aesthetic medicine, ensuring you receive world-class care designed specifically for your skin\'s needs.',
     tags: [
       'Custom Protocols',

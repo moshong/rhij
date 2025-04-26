@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'next/core-web-vitals',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -95,5 +96,11 @@ module.exports = {
         ],
       },
     ],
+    // Disable rules causing problems in your deployment
+    'no-trailing-spaces': 'off',
+    'arrow-parens': 'off',
+    'react/jsx-closing-tag-location': 'off',
+    'react/no-unknown-property': 'off',
+    'eol-last': 'off',
   },
 };

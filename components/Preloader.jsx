@@ -108,7 +108,7 @@ const Preloader = () => {
         >
           {/* Main circular logo */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-56 h-56 rounded-full bg-white shadow-[0_0_50px_rgba(255,255,255,0.8)] flex items-center justify-center" 
+            <div className="w-56 h-56 rounded-full bg-white shadow-[0_0_50px_rgba(255,255,255,0.8)] flex items-center justify-center"
               style={{
                 transform: 'translateZ(20px)',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.2), inset 0 5px 10px rgba(255,255,255,0.5)',
@@ -123,7 +123,7 @@ const Preloader = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent" />
                 
                 {/* Shine effect */}
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent"
                   variants={shineVariants}
                   initial="initial"
@@ -154,7 +154,7 @@ const Preloader = () => {
         </motion.div>
         
         {/* Brand name */}
-        <motion.div 
+        <motion.div
           variants={textVariants}
           initial="initial"
           animate="animate"
@@ -170,7 +170,7 @@ const Preloader = () => {
           {/* Loading indicator */}
           <div className="mt-6 flex justify-center items-center">
             <div className="relative w-32 h-1 bg-white/20 rounded-full overflow-hidden">
-              <motion.div 
+              <motion.div
                 className="absolute top-0 left-0 h-full bg-white rounded-full"
                 initial={{ width: 0 }}
                 animate={{ 
@@ -184,12 +184,14 @@ const Preloader = () => {
       </div>
       
       {/* Add custom CSS for floating animation */}
-      <style jsx={true} global={true}>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0) scale(0.8); opacity: 0.5; }
-          50% { transform: translateY(-20px) scale(1); opacity: 0.9; }
-        }
-      `}</style>
+      <style>
+        {`
+          @keyframes float {
+            0%, 100% { transform: translateY(0) scale(0.8); opacity: 0.5; }
+            50% { transform: translateY(-20px) scale(1); opacity: 0.9; }
+          }
+        `}
+      </style>
     </motion.div>
   );
 };

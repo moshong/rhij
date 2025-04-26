@@ -17,11 +17,9 @@ module.exports = {
       'custom-lg': '1100px',
       'xl': '1280px',
       '2xl': '1536px',
+      'short': {'raw': '(max-height: 750px)'},
     },
     extend: {
-      screens: {
-        'short': { 'raw': '(max-height: 750px)' },
-      },
       gradientColorStops: {
         'white-pink': ['#FFFFFF', '#FFB6C1']
       },
