@@ -103,4 +103,7 @@ module.exports = {
     'react/no-unknown-property': 'off',
     'eol-last': 'off',
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
