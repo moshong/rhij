@@ -63,7 +63,7 @@ export const services = [
       img: '/imgs/treat.png',
       alt: 'Chemical Peel Image',
     },
-    img: '/imgs/contact-bg',
+    img: '/imgs/hero-pattern-5',
     alt: 'Chemical peel facial treatment with elegant background',
     subtitle: 'Skin Resurfacing',
     title: 'Diamond Glow Facial',
@@ -80,7 +80,7 @@ export const services = [
       img: '/imgs/results.png',
       alt: 'LED Therapy Image',
     },
-    img: '/imgs/led-treatment',
+    img: '/imgs/hero-pattern-5',
     alt: 'Advanced LED therapy treatment',
     subtitle: 'Light-Based Healing',
     title: 'Photodynamic Therapy',
@@ -97,7 +97,7 @@ export const services = [
       img: '/imgs/products.png',
       alt: 'Bespoke Treatment Image',
     },
-    img: '/imgs/bespoke-treatment',
+    img: '/imgs/hero-pattern-5',
     alt: 'Bespoke aesthetic treatment',
     subtitle: 'Tailored Excellence',
     title: 'Korean Luxury Facial',
@@ -111,14 +111,14 @@ export const services = [
   },
   {
     icon: {
-      img: '/imgs/vitamin-therapy.png',
+      img: '/imgs/shop.png',
       alt: 'IV Vitamin Therapy Image',
     },
-    img: '/imgs/vitamin-therapy-bg',
+    img: '/imgs/hero-pattern-5',
     alt: 'Luxury IV vitamin therapy treatment',
     subtitle: 'Wellness Infusions',
     title: 'Luxury IV & IM Vitamin Therapy',
-    text: 'Elevate your wellness with personalized vitamin infusions designed to restore energy, boost immunity, and enhance beauty — all in a serene, medically supervised setting. \nOur Signature Offerings include Hydration & Energy Drips, Immunity & Recovery Blends, Beauty & Anti-Aging Injections, and Weight Support & Detox Shots. Each treatment is expertly curated, clinically administered, and exclusively designed for your unique needs. As a Registered Nurse Practitioner, I ensure safe, effective delivery of premium vitamin therapies that revitalize from within.',
+    text: 'Elevate your wellness with personalized vitamin infusions designed to restore energy, boost immunity, and enhance beauty — all in a serene, medically supervised setting. \nOur Signature Offerings include Hydration & Energy Drips, Immunity & Recovery Blends, Beauty & Anti-Aging Injections, and Weight Support & Detox Shots. Each treatment is expertly curated, clinically administered, and exclusively designed for your unique needs. Board certified nurse practioner in Family Medicine, I ensure safe, effective delivery of premium vitamin therapies that revitalize from within.',
     tags: [
       'Hydration & Energy',
       'Immunity Boost',
@@ -265,7 +265,7 @@ export const socials = [
   {
     name: 'facebook',
     icon: FaFacebookF,
-    href: 'https://www.facebook.com/rhijaesthetics',
+    href: 'https://www.facebook.com/profile.php?id=61559966333210',
   },
   {
     name: 'linkedin',
@@ -283,7 +283,7 @@ export const contact = [
   {
     name: 'location',
     icon: TiLocation,
-    content: 'Rhij Aesthetics and Skin Care, Suite 105',
+    content: 'Rhij Aesthetics and Skin Care,IOWA ',
     url: 'https://goo.gl/maps/uWJAxEnVrjFuUeSH7'
   },
   {
@@ -295,7 +295,9 @@ export const contact = [
   {
     name: 'phone',
     icon: FaPhoneAlt,
-    content: '(555) 123-4567',
-    url: 'tel:5551234567'
+    content: ' 319-305-8181',
+    url: 'tel: 319-305-8181'
   }
 ];
+
+export const disclaimer = "Disclaimer: Our services and products have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease. Information provided is for educational purposes only and not medical advice. Please consult your physician before starting any treatment. All therapies are formulated for healthy adults by Peak IV Infusion and Wellness, PLLC and any therapy designations are for marketing purposes only.";

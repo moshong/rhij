@@ -1,7 +1,9 @@
 import { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
 import { Link } from 'react-scroll';
+import Image from 'next/image';
 import SideBar from './SideBar';
+import { ThemeToggle } from '../../components';
 import { navbar } from '../../constants';
 import { useScrollDirection } from '../../utils/hooks';
 
@@ -33,9 +35,13 @@ const Header = ({ setOverlay }) => {
             href="/#home"
           >
             <div className="flex items-center group">
-              <span className="text-white text-2xl font-light tracking-widest">RHIJ</span>
-              <span className="text-white text-2xl font-extralight tracking-wider ml-1">AESTHETICS</span>
-              <div className="h-4 w-4 rounded-full bg-white/70 ml-2 shadow-glow group-hover:scale-110 transition-transform duration-300"></div>
+              <Image 
+                src="/Logos/logo.png" 
+                alt="RHIJ Aesthetics & Wellness Logo" 
+                width={140} 
+                height={30} 
+                className="group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </Link>
           <div className="flex flex-row items-center gap-12">
@@ -62,6 +68,7 @@ const Header = ({ setOverlay }) => {
               </ul>
             </nav>
             <div className="flex flex-row gap-12 items-center">
+              <ThemeToggle />
 
               <a
                 href="https://book.carepatron.com/Rhij-Aesthetics-and-Skin-Care/Rhij?p=PKRmBx5QS4CLC2nWnCR2Jg&s=Q7znKVgM"

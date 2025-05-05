@@ -24,13 +24,13 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="bg-palette-5 w-full">
+    <div className="bg-palette-5 dark:bg-dark-bg w-full">
       {/* Preloader */}
       <Preloader />
       
       <div className={`${overlay && 'fixed inset-0 z-20 bg-[rgba(0,0,0,0.3)] backdrop-blur-[2px]'} transition duration-500`} />
      
-      <div className="text-gray-500 font-sans" ref={pageRef}>
+      <div className="text-gray-500 dark:text-dark-text font-sans" ref={pageRef}>
         <Header setOverlay={() => setOverlay(!overlay)}/>
         <Hero />
         <About /> 

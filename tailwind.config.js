@@ -6,6 +6,7 @@ module.exports = {
     './sections/**/*.{html,js,jsx}',
     './styles/**/*.{js,jsx}',
   ],
+  darkMode: 'class', // Enable class-based dark mode
   mode: 'jit',
   theme: {
     screens: {
@@ -31,6 +32,11 @@ module.exports = {
         'palette-3': '#FFC3A0', // light peach
         'palette-4': '#F5E1DA', // beige
         'palette-5': '#FFF6F0', // light beige/cream
+        'dark-bg': '#121212',
+        'dark-surface': '#1E1E1E',
+        'dark-primary': '#E498A7', // darker peach for dark mode
+        'dark-secondary': '#D384A1', // darker pink for dark mode
+        'dark-text': '#E0E0E0',
       },
       transitionTimingFunction: {
         'out-flex': 'cubic-bezier(0.05, 0.6, 0.4, 0.9)',

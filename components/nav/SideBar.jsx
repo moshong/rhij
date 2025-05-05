@@ -4,6 +4,8 @@ import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 import { GrClose } from 'react-icons/gr';
 import { FaPhoneAlt } from 'react-icons/fa';
+import Image from 'next/image';
+import { ThemeToggle } from '../../components';
 import { navbar, socials } from '../../constants';
 import styles from '../../styles';
 
@@ -32,9 +34,13 @@ const SideBar = ({ active, handleClick }) => {
             href="/#home"
           >
             <div className="flex items-center py-4">
-              <span className="text-palette-1 text-2xl font-light tracking-widest">RHIJ</span>
-              <span className="text-palette-2 text-2xl font-extralight tracking-wider ml-1">AESTHETICS</span>
-              <div className="h-4 w-4 rounded-full bg-palette-2/70 ml-2" />
+              <Image 
+                src="/Logos/logo.png" 
+                alt="RHIJ Aesthetics & Wellness Logo" 
+                width={140} 
+                height={30} 
+                className="hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </Link>
         </div>
@@ -75,6 +81,13 @@ const SideBar = ({ active, handleClick }) => {
             >
               Click Here
             </a>
+          </div>
+        </div>
+
+        <div className="flex justify-center mt-4">
+          <div className="flex items-center gap-4">
+            <span className="text-gray-600 font-medium">Theme</span>
+            <ThemeToggle />
           </div>
         </div>
 

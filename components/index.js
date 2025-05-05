@@ -15,6 +15,7 @@ import BackToTop from './BackToTop';
 import Footer from './nav/Footer';
 import Picture from './Picture';
 import Preloader from './Preloader';
+import ThemeToggle from './ThemeToggle';
 
 export {
   Header,
@@ -35,4 +36,5 @@ export {
   Footer,
   Picture,
   Preloader,
+  ThemeToggle,
 };

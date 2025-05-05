@@ -1,7 +1,8 @@
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 import { IoIosArrowForward } from 'react-icons/io';
-import { socials, navbar, services, contact } from '../../constants';
+import Image from 'next/image';
+import { socials, navbar, services, contact, disclaimer } from '../../constants';
 import styles from '../../styles';
 
 const Footer = () => {
@@ -13,7 +14,13 @@ const Footer = () => {
       <div className="mx-auto flex flex-col gap-8 items-center justify-between">
         <div className="flex flex-row flex-wrap justify-start md:justify-center px-8 py-[50px] lg:py-[100px] gap-[50px] max-w-full md:w-[870px] min-[1650px]:w-full">
           <div className="flex flex-row items-center pb-12 pr-[30px]">
-            <h1 className="text-white text-3xl font-abril tracking-wider">RHIJ AESTHETICS</h1>
+            <Image 
+              src="/Logos/logo.png" 
+              alt="RHIJ Aesthetics & Wellness Logo" 
+              width={180} 
+              height={40} 
+              className="object-contain"
+            />
           </div>
 
           <div className="flex flex-col gap-8 max-w-full md:max-w-[450px]">
@@ -113,8 +120,12 @@ const Footer = () => {
 
         <div className="h-[1px] w-full bg-palette-3 opacity-50" />
 
+        <p className="text-palette-5 px-8 md:px-12 lg:px-24 py-4 text-[11px] sm:text-[12px] text-center max-w-[1200px] italic opacity-80">
+          {disclaimer}
+        </p>
+
         <p className="text-white px-4 pb-8 text-[12px] sm:text-[14px] text-center">
-          © Copyright Rhij Aesthetics 2025 | All Rights Reserved
+          © Copyright RHIJ Aesthetics & Wellness 2025 | All Rights Reserved
         </p>
       </div>
     </footer>

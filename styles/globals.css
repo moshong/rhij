@@ -13,8 +13,109 @@
   scroll-behavior: smooth;
 }
 
+/* Add smooth transitions for theme switching */
+:root {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html,
+body,
+#root {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Apply transitions to common elements */
+a, button, p, h1, h2, h3, h4, h5, h6, div, span, input, textarea, section {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 h1, h2, h3, h4, h5, h6, .heading-font {
   font-family: "Playfair Display", serif;
+}
+
+/* Dark mode styles */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  @apply bg-dark-bg text-dark-text;
+}
+
+.dark .bg-palette-5 {
+  @apply bg-dark-bg;
+}
+
+.dark .bg-palette-4 {
+  @apply bg-dark-surface;
+}
+
+.dark .bg-white {
+  @apply bg-dark-surface;
+}
+
+.dark .text-palette-1 {
+  @apply text-dark-primary;
+}
+
+.dark .text-palette-2 {
+  @apply text-dark-secondary;
+}
+
+.dark .border-palette-1 {
+  @apply border-dark-primary;
+}
+
+.dark .border-palette-2 {
+  @apply border-dark-secondary;
+}
+
+.dark .hover\:bg-palette-5:hover {
+  @apply hover:bg-dark-surface;
+}
+
+.dark .hover\:text-palette-2:hover {
+  @apply hover:text-dark-secondary;
+}
+
+.dark .hover\:border-palette-2:hover {
+  @apply hover:border-dark-secondary;
+}
+
+.dark .bg-palette-1 {
+  @apply bg-dark-primary bg-opacity-90;
+}
+
+.dark .bg-palette-2 {
+  @apply bg-dark-secondary;
+}
+
+/* Improve text contrast in dark mode */
+.dark .text-gray-500 {
+  @apply text-gray-300;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-300;
+}
+
+/* Handle image backgrounds better in dark mode */
+.dark img {
+  filter: brightness(0.9);
+}
+
+/* Adjust shadows for dark mode */
+.dark .shadow-lg,
+.dark .shadow-xl,
+.dark .shadow-2xl {
+  --tw-shadow-color: rgba(0, 0, 0, 0.4);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/* Style form elements in dark mode */
+.dark input,
+.dark textarea {
+  @apply bg-dark-surface border-gray-700;
 }
 
 .glassmorphism {
