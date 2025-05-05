@@ -108,6 +108,23 @@ export const services = [
       'Expert Analysis',
       'Premium Experience',
     ]
+  },
+  {
+    icon: {
+      img: '/imgs/vitamin-therapy.png',
+      alt: 'IV Vitamin Therapy Image',
+    },
+    img: '/imgs/vitamin-therapy-bg',
+    alt: 'Luxury IV vitamin therapy treatment',
+    subtitle: 'Wellness Infusions',
+    title: 'Luxury IV & IM Vitamin Therapy',
+    text: 'Elevate your wellness with personalized vitamin infusions designed to restore energy, boost immunity, and enhance beauty — all in a serene, medically supervised setting. \nOur Signature Offerings include Hydration & Energy Drips, Immunity & Recovery Blends, Beauty & Anti-Aging Injections, and Weight Support & Detox Shots. Each treatment is expertly curated, clinically administered, and exclusively designed for your unique needs. As a Registered Nurse Practitioner, I ensure safe, effective delivery of premium vitamin therapies that revitalize from within.',
+    tags: [
+      'Hydration & Energy',
+      'Immunity Boost',
+      'Beauty Enhancement',
+      'Medical-Grade Vitamins',
+    ]
   }
 ];
 
