@@ -118,7 +118,7 @@ export const services = [
     alt: 'Luxury IV vitamin therapy treatment',
     subtitle: 'Wellness Infusions',
     title: 'Luxury IV & IM Vitamin Therapy',
-    text: 'Elevate your wellness with personalized vitamin infusions designed to restore energy, boost immunity, and enhance beauty — all in a serene, medically supervised setting. \nOur Signature Offerings include Hydration & Energy Drips, Immunity & Recovery Blends, Beauty & Anti-Aging Injections, and Weight Support & Detox Shots. Each treatment is expertly curated, clinically administered, and exclusively designed for your unique needs. Board certified nurse practioner in Family Medicine, I ensure safe, effective delivery of premium vitamin therapies that revitalize from within.',
+    text: 'Elevate your wellness with personalized vitamin infusions designed to restore energy, boost immunity, and enhance beauty — all in a serene, medically supervised setting. \nOur Signature Offerings include Hydration & Energy Drips, Immunity & Recovery Blends, Beauty & Anti-Aging Injections, and Weight Support & Detox Shots. Each treatment is expertly curated, clinically administered, and exclusively designed for your unique needs.As a Board certified Nurse Practitioner in Family Medicine, I ensure safe, effective delivery of premium vitamin therapies that revitalize from within.',
     tags: [
       'Hydration & Energy',
       'Immunity Boost',
@@ -283,8 +283,8 @@ export const contact = [
   {
     name: 'location',
     icon: TiLocation,
-    content: 'Rhij Aesthetics and Skin Care,IOWA ',
-    url: 'https://goo.gl/maps/uWJAxEnVrjFuUeSH7'
+    content: 'Rhij Aesthetics and Skin Care,Cedar Rapids, Iowa ',
+    url: 'https://www.google.com/maps/place/Cedar+Rapids,+IA,+USA/@41.9692625,-91.8290466,11z/data=!3m1!4b1!4m6!3m5!1s0x87e45f7aa02f4251:0x55ee60432ce6ddc0!8m2!3d41.9778795!4d-91.6656232!16zL20vMHQwbjU?entry=ttu&g_ep=EgoyMDI1MDUwNS4wIKXMDSoASAFQAw%3D%3D'
   },
   {
     name: 'email',
@@ -300,4 +300,4 @@ export const contact = [
   }
 ];
 
-export const disclaimer = "Disclaimer: Our services and products have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease. Information provided is for educational purposes only and not medical advice. Please consult your physician before starting any treatment. All therapies are formulated for healthy adults by Peak IV Infusion and Wellness, PLLC and any therapy designations are for marketing purposes only.";
+export const disclaimer = "Disclaimer: Our services and products have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease. Information provided is for educational purposes only and not medical advice. Please consult your physician before starting any treatment. All therapies are formulated for healthy adults by Rhij Aesthetics, LLC and any therapy designations are for marketing purposes only.";
