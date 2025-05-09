@@ -26,9 +26,8 @@ module.exports = {
       },
       colors: {
         'primary-black': '#1A232E',
-        'secondary-white': '#c7c7c7',
-        'palette-1': '#FF9A8B', // peach
-        'palette-2': '#FFB6C1', // pink
+        'secondary-white': '#c7c7c7',        'palette-1': '#FF9A8B', // peach
+        'palette-2': '#E7879B', // darker pink for better contrast with white
         'palette-3': '#FFC3A0', // light peach
         'palette-4': '#F5E1DA', // beige
         'palette-5': '#FFF6F0', // light beige/cream

@@ -42,7 +42,7 @@ const Services = () => {
             <TitleText title={<>What We Offer</>} />
           </motion.div>
 
-          <div className={`${styles.flexCenter} flex flex-row sm:gap-2 flex-wrap w-full custom-lg:w-[1030px] z-10`}>
+          <div className={`${styles.flexCenter} flex flex-row sm:gap-2 flex-wrap w-full custom-lg:w-[1050px] xl:w-[1150px] 2xl:w-[1250px] z-10`}>
             {services.map((item, index) => (
               <ServicesCard
                 key={index}

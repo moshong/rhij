@@ -270,7 +270,7 @@ export const socials = [
   {
     name: 'linkedin',
     icon: FaLinkedinIn,
-    href: '#',
+    href: 'https://www.linkedin.com/in/rhij-babatido-arnp-fnp-c-fnp-bc-ccm-4a2450209/',
   },
   {
     name: 'email',

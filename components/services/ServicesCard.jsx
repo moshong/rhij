@@ -6,14 +6,12 @@ import styles from '../../styles';
 const ServicesCard = ({ index, service, active, handleClick }) => (
   <motion.div
     variants={fadeIn('right', 'spring', index * 0.5, 1)}
-  >
-
-    <button
+  >    <button
       type="button"
       onClick={() => handleClick(service)}
-      className={`${styles.flexCenter} flex-row custom-lg:flex-col px-4 gap-5 cursor-pointer sm:rounded-md border-1 ${active === service ? 'bg-palette-1 text-white border-palette-1' : 'bg-white text-grey-900 border-gray-200'} shadow-md w-screen sm:w-[48vw] custom-lg:w-[250px] sm:mx-0 h-[100px] custom-lg:h-[200px] font-bold text-[18px] active:scale-95 transition duration-300`}
+      className={`${styles.flexCenter} flex-row custom-lg:flex-col px-4 gap-5 cursor-pointer sm:rounded-md border-1 ${active === service ? 'bg-palette-1 text-white border-palette-1' : 'bg-white text-grey-900 border-gray-200'} shadow-md w-screen sm:w-[48vw] custom-lg:w-[200px] xl:w-[220px] sm:mx-0 h-[100px] custom-lg:h-[200px] font-bold text-[18px] active:scale-95 transition duration-300`}
     >
-      <div className="flex flex-row items-center justify-start custom-lg:flex-col w-[250px] gap-5">
+      <div className="flex flex-row items-center justify-start custom-lg:flex-col w-full custom-lg:w-[180px] xl:w-[200px] gap-5">
         <img
           src={service.icon.img}
           alt={service.icon.alt}
