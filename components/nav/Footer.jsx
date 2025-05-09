@@ -125,7 +125,7 @@ const Footer = () => {
         </p>
 
         <p className="text-white px-4 pb-8 text-[12px] sm:text-[14px] text-center">
-          © Copyright RHIJ Aesthetics & Wellness 2025 | All Rights Reserved
+          © Copyright RHIJ Aesthetics & Skin Care | All Rights Reserved
         </p>
       </div>
     </footer>

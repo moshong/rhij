@@ -53,15 +53,19 @@ const About = () => {
 
             <div className='flex flex-col gap-8'>
               <p className={`font-normal text-[16px] leading-7`}>
-                Welcome to <span className=''>Rhij Aesthetics</span>, your premier beauty destination. We take pride in offering a comprehensive range of beauty and wellness treatments tailored to enhance your natural beauty. Our experienced team of aestheticians is dedicated to delivering exceptional results that exceed your expectations. From facial treatments and massages to nail care and beauty enhancements, we've got your beauty needs covered.
+                Welcome to <span className=''>Rhij Aesthetics</span>
               </p>
 
               <p className={`font-normal text-[16px] leading-7`}>
-                We understand that every client is unique, and we work closely with you to ensure personalized solutions that address your specific concerns and goals. We use only premium, medical-grade products and the latest techniques to ensure you receive the highest quality care and results that last.
+                At Rhij Aesthetics, we combine advanced medical training with a personalized approach to wellness and aesthetics. Founded and led by a board-certified Family Nurse Practitioner, our clinic offers medically supervised IV vitamin therapy, intramuscular wellness injections, and aesthetic services such as Korean luxury facials, Diamond glow facial, underarm diamond peel and more.
               </p>
 
               <p className={`font-normal text-[16px] leading-7`}>
-                Whether you're seeking a regular beauty regimen or preparing for a special occasion, we are here to help you look and feel your best. Book your appointment today and experience the <span className='font-extrabold'>Rhij difference</span> - where your beauty is our priority and your satisfaction is guaranteed.
+                Every treatment is grounded in evidence-based practice and designed to support your overall health, energy levels, and confidence—from the inside out. We prioritize patient safety, clinical integrity, and personalized care—ensuring that each client receives the highest standard of treatment in a professional and comfortable setting.
+              </p>
+
+              <p className={`font-normal text-[16px] leading-7`}>
+                Whether you're seeking a regular beauty regimen or preparing for a special occasion, we are here to help you look and feel your best. Book your appointment today and experience the <span className='font-extrabold'>Rhij difference</span> - where your beauty is our priority!
               </p>
             </div>
 

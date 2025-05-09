@@ -24,8 +24,7 @@ const Header = ({ setOverlay }) => {
   return (
     <div className={`sticky top-0 ${scrollDirection !== 'up' && !active ? '-translate-y-full 2xl:translate-y-0' : 'translate-y-0'}  ${active && 'overflow-visible'} ${hidden ? 'overflow-hidden' : 'overflow-visible'}  w-full relative bg-palette-1/[.90] z-20 shadow-2xl transition duration-300`}>
       <nav className="p-6 h-fit">
-        <div className="max-w-[1700px] mx-auto flex justify-between gap-8 h-[30px] items-center">
-          <Link
+        <div className="max-w-[1700px] mx-auto flex justify-between gap-8 h-[30px] items-center">          <Link
             activeClass="active"
             to="home"
             spy
@@ -35,13 +34,12 @@ const Header = ({ setOverlay }) => {
             href="/#home"
           >
             <div className="flex items-center group">
-              <Image 
-                src="/Logos/logo.png" 
-                alt="RHIJ Aesthetics & Wellness Logo" 
-                width={140} 
-                height={30} 
-                className="group-hover:scale-105 transition-transform duration-300"
-              />
+              <h1 
+                className="font-playfair text-white text-xl md:text-2xl font-semibold tracking-wider group-hover:scale-105 transition-transform duration-300"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                RHIJ AESTHETICS
+              </h1>
             </div>
           </Link>
           <div className="flex flex-row items-center gap-12">

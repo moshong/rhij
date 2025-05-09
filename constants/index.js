@@ -275,7 +275,7 @@ export const socials = [
   {
     name: 'email',
     icon: MdEmail,
-    href: 'mailto:rhijrhijaesthetics@gmail.com'
+    href: 'mailto:rhijaesthetics@gmail.com'
   }
 ];
 
@@ -289,8 +289,8 @@ export const contact = [
   {
     name: 'email',
     icon: MdEmail,
-    content: 'rhij@rhijaesthetics.com',
-    url: 'mailto:rhij@rhijaesthetics.com'
+    content: 'rhijaesthetics@gmail.com',
+    url: 'mailto:rhijaesthetics@gmail.com'
   },
   {
     name: 'phone',

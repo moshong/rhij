@@ -6,7 +6,7 @@ import { TypingText, TitleText } from "../components";
 const TestimonialCard = ({ name, role, testimonial, index, profileImage }) => (
   <motion.div
     variants={fadeIn('up', 'spring', index * 0.3, 0.75)}
-    className="bg-white rounded-lg shadow-lg p-6 mx-4 my-4 md:w-[380px] flex flex-col"
+    className="bg-white dark:bg-dark-surface rounded-lg shadow-lg p-6 mx-4 my-4 md:w-[380px] flex flex-col"
   >
     <div className="flex items-center mb-4">
       {profileImage ? (
@@ -21,8 +21,8 @@ const TestimonialCard = ({ name, role, testimonial, index, profileImage }) => (
         </div>
       )}
       <div className="ml-4">
-        <h4 className="font-bold text-lg">{name}</h4>
-        <p className="text-gray-600 text-sm">{role}</p>
+        <h4 className="font-bold text-lg dark:text-white">{name}</h4>
+        <p className="text-gray-600 dark:text-gray-300 text-sm">{role}</p>
       </div>
     </div>
     <div className="mb-4">
@@ -30,7 +30,7 @@ const TestimonialCard = ({ name, role, testimonial, index, profileImage }) => (
         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
       </svg>
     </div>
-    <p className="text-gray-700 flex-grow">{testimonial}</p>
+    <p className="text-gray-700 dark:text-white flex-grow">{testimonial}</p>
     <div className="flex mt-4">
       {[...Array(5)].map((_, i) => (
         <svg key={i} className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
@@ -75,7 +75,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-    <section className='flex flex-col items-center bg-palette-4 pt-[100px] pb-[100px]' id='testimonials'>
+    <section className='flex flex-col items-center bg-palette-4 dark:bg-dark-bg pt-[100px] pb-[100px]' id='testimonials'>
         <motion.div
             variants={staggerContainer}
             initial="hidden"
