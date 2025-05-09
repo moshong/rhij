@@ -42,7 +42,7 @@ const Hero = () => {
             />
           </div>
           <motion.p variants={textVariant(0.7)} className={styles.heroText}>
-            Where your beauty is my priority. Discover a world of personalized treatment and relaxation.
+            Discover a world of personalized treatment and relaxation.
           </motion.p>
           <motion.div variants={textVariant(1)} className='flex flex-col small-mobile:flex-row gap-2 mobile:gap-6'>
             {heroBtns.map(({name, path, external}, i) => (
