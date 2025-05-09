@@ -67,10 +67,10 @@ const SideBar = ({ active, handleClick }) => {
               </li>
             ))}
           </ul>
-        </nav>
-
-        <div className="flex flex-row gap-6 justify-center items-center">
-          <FaPhoneAlt className="w-[30px] h-[30px] text-palette-1" />
+        </nav>        <div className="flex flex-row gap-6 justify-center items-center">
+          <div className="border-[1px] border-palette-1 bg-white dark:bg-dark-surface rounded-full p-2 flex items-center justify-center group-hover:border-white group-hover:bg-palette-1 transition duration-300">
+            <FaPhoneAlt className="w-[20px] h-[20px] text-palette-1" />
+          </div>
           <div>
             <h4>Book Now</h4>
             <a 
@@ -96,9 +96,8 @@ const SideBar = ({ active, handleClick }) => {
             const SocialIcon = icon;
 
             return (
-              <a href={href} key={name} aria-label={name}>
-                <div className={`${styles.flexCenter} w-[50px] h-[50px] rounded-full bg-palette-1 border-[1px] border-palette-1 hover:border-palette-1 cursor-pointer hover:bg-white transition duration-300 group`}>
-                  <SocialIcon size={20} className="text-white group-hover:text-palette-1" />
+              <a href={href} key={name} aria-label={name}>                <div className={`${styles.flexCenter} w-[50px] h-[50px] rounded-full bg-white dark:bg-dark-surface border-[1px] border-palette-1 cursor-pointer hover:bg-palette-1 transition duration-300 group`}>
+                  <SocialIcon size={20} className="text-palette-1 group-hover:text-white dark:group-hover:text-dark-text" />
                 </div>
               </a>
             );

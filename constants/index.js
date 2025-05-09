@@ -1,9 +1,5 @@
 import { BsInstagram } from 'react-icons/bs';
-import { FaFacebookF } from 'react-icons/fa';
-import { FaLinkedinIn } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
-import { TiLocation } from 'react-icons/ti';
-import { FaPhoneAlt } from 'react-icons/fa'
+import { FaFacebookF, FaLinkedinIn, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 export const navbar = [
   {
@@ -266,15 +262,14 @@ export const socials = [
     name: 'facebook',
     icon: FaFacebookF,
     href: 'https://www.facebook.com/profile.php?id=61559966333210',
-  },
-  {
+  },  {
     name: 'linkedin',
     icon: FaLinkedinIn,
     href: 'https://www.linkedin.com/in/rhij-babatido-arnp-fnp-c-fnp-bc-ccm-4a2450209/',
   },
   {
     name: 'email',
-    icon: MdEmail,
+    icon: FaEnvelope,
     href: 'mailto:rhijaesthetics@gmail.com'
   }
 ];
@@ -282,13 +277,13 @@ export const socials = [
 export const contact = [
   {
     name: 'location',
-    icon: TiLocation,
+    icon: FaMapMarkerAlt,
     content: 'Rhij Aesthetics and Skin Care,Cedar Rapids, Iowa ',
     url: 'https://www.google.com/maps/place/Cedar+Rapids,+IA,+USA/@41.9692625,-91.8290466,11z/data=!3m1!4b1!4m6!3m5!1s0x87e45f7aa02f4251:0x55ee60432ce6ddc0!8m2!3d41.9778795!4d-91.6656232!16zL20vMHQwbjU?entry=ttu&g_ep=EgoyMDI1MDUwNS4wIKXMDSoASAFQAw%3D%3D'
   },
   {
     name: 'email',
-    icon: MdEmail,
+    icon: FaEnvelope,
     content: 'rhijaesthetics@gmail.com',
     url: 'mailto:rhijaesthetics@gmail.com'
   },

@@ -1,7 +1,7 @@
 import styles from '../../styles';
 
 const ContactCard = () => (
-  <div className={`${styles.flexCenter} px-8 absolute top-1/2 lg:top-1/2 -translate-y-1/2 lg:-translate-y-1/2 right-1/2 lg:right-full translate-x-1/2 lg:translate-x-1/2 w-[250px] sm:w-[300px] h-fit py-6 bg-palette-2 rounded-md text-white flex flex-col gap-5 text-center shadow-2xl z-5 transition duration-500`}>
+  <div className={`${styles.flexCenter} px-8 w-[90%] mx-auto sm:w-[350px] md:w-[380px] lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-full lg:translate-x-1/2 h-fit py-8 bg-palette-2 rounded-md text-white flex flex-col gap-5 text-center shadow-2xl z-5 transition duration-500`}>
     <img
       src="/icons/leaf-icon.svg"
       alt="Leaf Icon"

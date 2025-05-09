@@ -30,10 +30,9 @@ const Footer = () => {
               {socials.map(({ name, icon, href }) => {
                 const SocialIcon = icon;
 
-                return (
-                  <a href={href} key={name} aria-label={name}>
-                    <div key={name} className={`${styles.flexCenter} w-[40px] h-[40px] rounded-full bg-palette-1 border-[1px] border-palette-3 cursor-pointer hover:bg-palette-3 transition duration-300 group`}>
-                      <SocialIcon size={20} className="text-palette-3 group-hover:text-palette-1" />
+                return (                  <a href={href} key={name} aria-label={name}>
+                    <div key={name} className={`${styles.flexCenter} w-[40px] h-[40px] rounded-full bg-white dark:bg-dark-surface border-[1px] border-palette-1 cursor-pointer hover:bg-palette-1 transition duration-300 group`}>
+                      <SocialIcon size={20} className="text-palette-1 group-hover:text-white dark:group-hover:text-dark-text" />
                     </div>
                   </a>
                 );

@@ -5,7 +5,6 @@ import { services } from '../../constants';
 
 const ServiceInfo = ({ active, handleChange }) => {
   const activeIndex = services.indexOf(active);
-
   return (
     <div className="relative z-1 flex flex-col lg:flex-row w-[100vw] h-full max-h-[800px] lg:h-auto">
       <div className="bg-white bg-hero-pattern w-full lg:w-2/3 flex flex-col items-center justify-center lg:items-end">
@@ -27,7 +26,9 @@ const ServiceInfo = ({ active, handleChange }) => {
           alt={active.alt}
           className="object-cover w-full h-full brightness-60"
         />
-        <ContactCard />
+        <div className="flex justify-center lg:block my-8 lg:my-0">
+          <ContactCard />
+        </div>
       </div>
     </div>
   );

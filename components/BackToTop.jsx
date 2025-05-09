@@ -41,10 +41,9 @@ const BackToTop = ({ pageRef }) => {
 
   return (
     <AnimatePresence>
-      {position < 0.98 && (
-        <motion.button
+      {position < 0.98 && (        <motion.button
           onClick={scrollToTop}
-          className="floating-element fixed bottom-[50px] right-[50px] z-10 cursor-pointer"
+          className="floating-element fixed bottom-[50px] right-[50px] z-10 cursor-pointer hover:scale-110 transition-transform duration-300"
           {...animateOnScroll}
         >
           <svg
@@ -53,11 +52,10 @@ const BackToTop = ({ pageRef }) => {
             height="60px"
             className="relative z-1 -rotate-90"
           >
-            <circle
-              cx={diameter / 2}
+            <circle              cx={diameter / 2}
               cy={diameter / 2}
               r={radius}
-              stroke="#90C8AC"
+              stroke="#E7879B" // Changed from #90C8AC to dark pink color
               strokeWidth={`${strokeWidth}px`}
               fill="transparent"
               style={{
@@ -65,9 +63,8 @@ const BackToTop = ({ pageRef }) => {
                 strokeDashoffset: circumference * position,
               }}
             />
-          </svg>
-          <div className="absolute bottom-0 right-0 w-full h-full rounded-full border-3 shadow-lg z-[-1] flex items-center justify-center">
-            <BsArrowUp size={29} color="#90C8AC" />
+          </svg>          <div className="absolute bottom-0 right-0 w-full h-full rounded-full border-[2px] border-palette-2 bg-white dark:bg-dark-surface shadow-lg z-[-1] flex items-center justify-center">
+            <BsArrowUp size={29} color="#FF9A8B" />
           </div>
         </motion.button>
       )}

@@ -57,7 +57,7 @@ const ContactForm = () => {
   });
 
   return (
-    <div className="relative flex flex-col px-8 py-20 sm:px-20 lg:px-12 xl:px-20 leading-8 w-full max-w-[700px] bg-white">
+    <div className="relative flex flex-col px-4 sm:px-8 py-12 sm:py-20 md:px-20 lg:px-12 xl:px-20 leading-8 w-full max-w-[700px] bg-white">
       {submitted ? (
 
       // Display message confirmation on submit
@@ -66,8 +66,7 @@ const ContactForm = () => {
           <h3 className="text-[32px] pb-6 font-sans font-light text-palette-1 border-b-[1px] border-palette-1/30">
             Thank You!
           </h3>
-          <div className="flex flex-col gap-8 items-center">
-            <div className="flex flex-row gap-4 mb-0 p-4 text-palette-2 justify-center items-center text-[24px] font-light">
+          <div className="flex flex-col gap-8 items-center">            <div className="flex flex-row gap-4 mb-0 p-4 text-palette-1 justify-center items-center text-[24px] font-light">
               <AiFillCheckCircle size={50} />
               <p>Your message has been sent.</p>
             </div>
@@ -92,16 +91,13 @@ const ContactForm = () => {
           <h3 className="text-[24px] sm:text-[32px] lg:text-[28px] mb-6 pb-6 font-sans font-light text-palette-1 border-b-[1px] border-palette-1/30">We'd love to hear from you!</h3>
           <p className="text-palette-1">
             Whether you have questions, inquiries, or simply want to chat about your landscaping needs, we're here to help. Just fill out the form below, and we'll get back to you as soon as possible. We can't wait to bring your outdoor dreams to life!
-          </p>
-
-          <div className={`${!isValid && touched.name ? 'flex flex-row  gap-4 mt-6 mb-0 p-4 bg-red-100/60 border-[1px] border-pink-500 text-pink-500 rounded-lg' : 'hidden'}`}>
+          </p>          <div className={`${!isValid && touched.name ? 'flex flex-row  gap-4 mt-6 mb-0 p-4 bg-red-100/60 border-[1px] border-palette-1 text-palette-1 rounded-lg' : 'hidden'}`}>
             <MdError size={30} />
             <p>Please fill in the required fields.</p>
           </div>
 
           {/* API error message */}
-          {apiError && (
-            <div className="flex flex-row gap-4 mt-6 mb-0 p-4 bg-red-100/60 border-[1px] border-pink-500 text-pink-500 rounded-lg">
+          {apiError && (            <div className="flex flex-row gap-4 mt-6 mb-0 p-4 bg-red-100/60 border-[1px] border-palette-1 text-palette-1 rounded-lg">
               <MdError size={30} />
               <p>{apiError}</p>
             </div>
