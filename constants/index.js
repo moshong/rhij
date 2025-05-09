@@ -46,7 +46,7 @@ export const services = [
     alt: 'Corrective facial treatment',
     subtitle: 'Customized Treatment',
     title: 'Classic Facial Cleansing',
-    text: 'Our Corrective Facials are personalized treatments designed to address your specific skin concerns. Using clinical-grade products and advanced techniques, these transformative facials target issues like acne, hyperpigmentation, aging, and sensitivity. \nAs a Registered Nurse and board-certified Nurse Practitioner, I combine medical expertise with aesthetic knowledge to deliver results-driven treatments. Each facial includes thorough analysis, deep cleansing, exfoliation, targeted treatment, and hydration to restore your skin\'s health and radiance.',
+    text: 'A deep-cleansing treatment that purifies, exfoliates, and refreshes the skin. Includes double cleansing, gentle exfoliation, extractions, and a customized mask for a clear, healthy glow.\n Ideal for all skin types and great for routine skin maintenance.',
     tags: [
       'Skin Analysis',
       'Clinical-Grade Products',
@@ -63,7 +63,7 @@ export const services = [
     alt: 'Chemical peel facial treatment with elegant background',
     subtitle: 'Skin Resurfacing',
     title: 'Diamond Glow Facial',
-    text: 'Our professional Chemical Peels offer controlled exfoliation to reveal fresher, more youthful skin beneath the surface. These treatments are carefully formulated to address multiple concerns including fine lines, uneven texture, sun damage, and acne scarring. \nUsing various strengths and formulations tailored to your skin type and concerns, our chemical peels stimulate cell renewal and collagen production. With my extensive training across the US, Philippines, and Hong Kong, I provide safe, effective treatments with minimal downtime and maximum results for a smoother, brighter complexion.',
+    text: 'Reveal smoother, brighter, and more youthful skin with our Diamond Glow Facial — a dual-action treatment combining diamond-tip microdermabrasion for deep exfoliation and ultrasonic infusion to deliver peptide-rich serums deep into the skin. \nThis treatment boosts cell turnover, stimulates collagen, and improves skin texture, leaving your skin refined, firm, and radiant.',
     tags: [
       'Exfoliation',
       'Cell Renewal',
@@ -97,7 +97,7 @@ export const services = [
     alt: 'Bespoke aesthetic treatment',
     subtitle: 'Tailored Excellence',
     title: 'Korean Luxury Facial',
-    text: 'Our Bespoke Aesthetic Treatments represent the pinnacle of personalized skincare. These comprehensive sessions begin with in-depth consultation and analysis to create a custom protocol addressing your unique skin concerns and goals. \nCombining elements from multiple modalities—including advanced cleansing techniques, specialized masks, targeted serums, and innovative technologies—these treatments deliver exceptional results. As a specialist with extensive training and experience, I continuously update my techniques to incorporate the latest advancements in aesthetic medicine, ensuring you receive world-class care designed specifically for your skin\'s needs.',
+    text: 'Unlock the secret to radiant, glass-like skin.\n Indulge in the ultimate skin renewal experience with our Korean Luxury Facial — our renowned treatment inspired by the elegance of K-beauty. This facial combines advanced technologies like photodynamic therapy, cryofacial, dermabrasion, and ultrasonic infusion with peptide-rich serums to deeply rejuvenate and restore your skin. \n Perfect for all skin types, this treatment enhances collagen production, refines texture, reduces fine lines and pores, and leaves your skin visibly lifted, radiant, and balanced.',
     tags: [
       'Custom Protocols',
       'Multi-Modality',
