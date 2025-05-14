@@ -9,7 +9,7 @@ const ContactCard = () => (
     />
     <h3 className="text-[22px] sm:text-[28px] font-sans-bold">Ready To Get Started?</h3>
     <p className="text-[16px]">Get in touch today for a free quote and consultation</p>
-    <a href="mailto:rhij@rhijaesthetics.com">
+    <a href="mailto:rhijaesthetics@gmail.com">
       <button type="button" className="font-bold border-[1px] border-white px-6 py-2 rounded-xl hover:bg-white hover:text-palette-2 active:scale-95 transition duration-300">CONTACT US</button>
     </a>
   </div>
