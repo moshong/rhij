@@ -8,9 +8,9 @@ module.exports = {
   ],
   darkMode: 'class', // Enable class-based dark mode
   mode: 'jit',
-  theme: {
-    screens: {
+  theme: {    screens: {
       'small-mobile': '320px',
+      'xs': '400px',
       'mobile': '380px',
       'sm': '640px',
       'md': '768px',

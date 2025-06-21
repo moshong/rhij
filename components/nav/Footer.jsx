@@ -4,6 +4,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import Image from 'next/image';
 import { socials, navbar, services, contact, disclaimer } from '../../constants';
 import styles from '../../styles';
+import GoogleMap from '../GoogleMap';
 
 const Footer = () => {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -25,7 +26,7 @@ const Footer = () => {
 
           <div className="flex flex-col gap-8 max-w-full md:max-w-[450px]">
             <h3 className={`${styles.footerHeading}`}>About</h3>
-            <p className="text-white font-lato leading-7 text-palette-5 text-[14px] sm:text-[16px]">At Rhij Aesthetics, we're dedicated to enhancing your natural beauty through personalized treatments and premium care. Our beauty studio offers a tranquil escape where you can relax and rejuvenate. With a focus on quality and attention to detail, we're committed to helping you look and feel your absolute best.</p>
+            <p className="font-lato leading-7 text-palette-5 text-[14px] sm:text-[16px]">At Rhij Aesthetics, we're dedicated to enhancing your natural beauty through personalized treatments and premium care. Our beauty studio offers a tranquil escape where you can relax and rejuvenate. With a focus on quality and attention to detail, we're committed to helping you look and feel your absolute best.</p>
             <div className="flex gap-4">
               {socials.map(({ name, icon, href }) => {
                 const SocialIcon = icon;
@@ -94,7 +95,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-
+          
           <div className="flex flex-col gap-6">
             <h3 className={`${styles.footerHeading}`}>Get In Touch</h3>
             <div className="flex flex-col justify-center gap-4">
@@ -112,6 +113,18 @@ const Footer = () => {
                   </a>
                 );
               })}
+            </div>
+            
+            <div className="mt-4 w-full md:max-w-[400px]">
+              <h4 className="text-palette-5 font-sans font-medium text-[16px] mb-3">Find Us</h4>
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <GoogleMap 
+                  location="1921 51st St NE Suite 4, Cedar Rapids, IA 52402" 
+                  height="250px" 
+                  zoom={16}
+                  showMarker={true} 
+                />
+              </div>
             </div>
           </div>
 

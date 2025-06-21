@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { staggerContainer, fadeIn } from '../utils/motion'
 import styles from '../styles';
@@ -45,57 +45,132 @@ const customScrollbarStyles = `
     white-space: normal;
     text-align: justify;
     line-height: 1.6;
+    max-width: 100%;
+    margin: 0 auto;
   }
-  
-  /* Mobile text optimization */
+    /* Mobile text optimization */
   @media (max-width: 640px) {
     .testimonial-text {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       letter-spacing: -0.01em;
-      text-align: left;
-      padding: 0 2px;
+      padding: 0;
       line-height: 1.5;
+      width: 100%;
+      text-align: justify;
     }
     
-    /* Add automatic soft hyphens for better text wrapping on small screens */
-    .testimonial-text span {
-      display: inline-block;
-      max-width: 100%;
+    /* Adjust spacing between lines */
+    .testimonial-text br {
+      display: block;
+      content: "";
+      margin-bottom: 0.25em;
+    }
+    
+    /* Center-align container on mobile but keep text justified */
+    .testimonial-text-container {
+      display: flex;
+      justify-content: center;
+      padding: 0 0.5rem;
+    }
+  }
+
+  /* Extra styles for testimonial cards to optimize space on mobile */
+  @media (max-width: 480px) {
+    .testimonial-card {
+      padding: 0.75rem !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .testimonial-header {
+      margin-bottom: 0.5rem !important;
+      justify-content: center;
+    }
+    
+    .testimonial-avatar {
+      width: 3rem !important;
+      height: 3rem !important;
+    }
+    
+    .testimonial-name {
+      font-size: 1rem !important;
+      text-align: center;
+    }
+    
+    .testimonial-role {
+      font-size: 0.75rem !important;
+      text-align: center;
+    }
+    
+    .testimonial-quote {
+      margin-bottom: 0.5rem !important;
+      text-align: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .testimonial-quote-icon {
+      width: 1.5rem !important;
+      height: 1.5rem !important;
+    }
+    
+    .testimonial-text-container {
+      margin: 0.25rem 0 !important;
+      padding: 0 0.75rem;
+      text-align: center;
+    }
+    
+    .star-rating {
+      justify-content: center;
     }
   }
 `;
 
-// Format testimonial text for better readability
+// Format testimonial text for better readability and mobile-friendly display
 const formatTestimonial = (text) => {
   // Clean up the text first
   const cleanText = text
     .replace(/\s+/g, ' ') // Normalize whitespace
     .trim();
   
-  // Insert soft hyphens at logical breaking points to help with text wrapping
-  return cleanText
+  // Process the text with added line breaks
+  const processedText = cleanText
     // Add a space after punctuation if missing
     .replace(/([.!?])([A-Z])/g, '$1 $2')
     // Add a space after emoji sequences if missing
     .replace(/([\u{1F300}-\u{1F6FF}|[\u{2600}-\u{26FF}])/gu, '$1 ');
+    
+  // For mobile-friendly layout, we'll create natural breaks
+  // at punctuation and sentence boundaries rather than fixed character counts
+  return processedText
+    // Add line breaks after punctuation followed by space
+    .replace(/([.!?]) /g, '$1\n')
+    // Add line breaks for commas in longer segments
+    .replace(/(.{20,}?), /g, '$1,\n')
+    // Add line breaks for natural pauses in very long sentences
+    .replace(/(.{35,}?) (and|but|or|as|if|for|with) /g, '$1\n$2 ');
 };
 
-const TestimonialCard = ({ name, role, testimonial, profileImage, isActive }) => (  <motion.div
+const TestimonialCard = ({ name, role, testimonial, profileImage, isActive }) => (
+  <motion.div
     initial={{ opacity: 0 }}
     animate={{ 
       opacity: 1,
       scale: isActive ? 1 : [0.95, 0.92],
       borderWidth: isActive ? '2px' : '1px'
     }}
-    transition={{ duration: 0.5 }}    className={`bg-white dark:bg-dark-surface rounded-lg shadow-lg p-3 px-2 sm:p-6 md:p-8 mx-1 sm:mx-4 my-4 flex flex-col transform cursor-pointer
-      h-[440px] small-mobile:h-[480px] sm:h-[400px] md:h-[380px] lg:h-[400px] overflow-hidden
+    transition={{ duration: 0.5 }}
+    className={`testimonial-card bg-white dark:bg-dark-surface rounded-lg shadow-lg p-3 px-2 sm:p-5 md:p-6 mx-0.5 sm:mx-3 md:mx-4 my-2 sm:my-4 flex flex-col transform cursor-pointer
+      h-[430px] small-mobile:h-[450px] xs:h-[420px] sm:h-[400px] md:h-[380px] lg:h-[400px] overflow-hidden w-full
       ${isActive 
         ? 'z-10 shadow-xl border-2 border-palette-1 dark:border-dark-primary' 
         : 'border border-gray-200 dark:border-gray-800'}`}
   >
-    <div className="flex items-center mb-4">
+    <div className="testimonial-header flex items-center mb-3 sm:mb-4 justify-center sm:justify-start">
       {profileImage ? (
-        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-palette-1 dark:border-dark-primary">
+        <div className="testimonial-avatar w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-palette-1 dark:border-dark-primary">
           <img 
             src={profileImage} 
             alt={`${name}'s profile`} 
@@ -103,29 +178,30 @@ const TestimonialCard = ({ name, role, testimonial, profileImage, isActive }) =>
           />
         </div>
       ) : (
-        <div className="w-16 h-16 rounded-full bg-palette-2 flex items-center justify-center text-white font-bold text-xl border-2 border-palette-1 dark:border-dark-primary">
+        <div className="testimonial-avatar w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-palette-2 flex items-center justify-center text-white font-bold text-lg md:text-xl border-2 border-palette-1 dark:border-dark-primary">
           {name.charAt(0)}
         </div>
       )}
-      <div className="ml-4">
-        <h4 className="font-bold text-lg dark:text-white font-heading">{name}</h4>
-        <p className="text-gray-600 dark:text-gray-300 text-sm">{role}</p>
+      <div className="ml-2 sm:ml-3 md:ml-4">
+        <h4 className="testimonial-name font-bold text-base sm:text-lg dark:text-white font-heading text-center sm:text-left">{name}</h4>
+        <p className="testimonial-role text-gray-600 dark:text-gray-300 text-xs sm:text-sm text-center sm:text-left">{role}</p>
       </div>
     </div>
-    <div className="mb-4 text-palette-1 dark:text-dark-primary">
-      <FaQuoteLeft className="w-8 h-8" />
-    </div>    <div className="flex-grow overflow-y-auto my-2 pr-1 custom-scrollbar">
-      <p className="text-gray-700 dark:text-white text-base md:text-lg testimonial-text">
-        {formatTestimonial(testimonial).split(' ').map((word, i) => (
-          <span key={i} className="inline-block">
-            {word}{' '}
-          </span>
+    <div className="testimonial-quote mb-2 sm:mb-3 md:mb-4 text-palette-1 dark:text-dark-primary flex justify-center sm:justify-start">
+      <FaQuoteLeft className="testimonial-quote-icon w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+    </div>    <div className="testimonial-text-container flex-grow overflow-y-auto my-1 sm:my-2 pr-1 custom-scrollbar">
+      <p className="text-gray-700 dark:text-white text-sm sm:text-base md:text-lg testimonial-text px-1">
+        {formatTestimonial(testimonial).split('\n').map((line, i) => (
+          <React.Fragment key={i}>
+            {line}
+            {i < formatTestimonial(testimonial).split('\n').length - 1 && <br />}
+          </React.Fragment>
         ))}
       </p>
     </div>
-    <div className="flex mt-4">
+    <div className="flex mt-2 sm:mt-3 md:mt-4 star-rating justify-center sm:justify-start">
       {[...Array(5)].map((_, i) => (
-        <svg key={i} className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+        <svg key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
         </svg>
       ))}
@@ -382,20 +458,18 @@ const Testimonials = () => {
         className={`mx-auto flex flex-col items-center w-full`}
       >
         <TypingText title='| Client Stories' textStyles='text-center' />
-        <TitleText title={<>What Our Clients Say</>} textStyles='text-center mb-[30px] md:mb-[50px]' />
-          {/* Carousel container */}
-        <div 
-          className="w-full max-w-[1400px] px-4 relative cursor-grab active:cursor-grabbing"          onTouchStart={handleTouchStart}
+        <TitleText title={<>What Our Clients Say</>} textStyles='text-center mb-[30px] md:mb-[50px]' />          {/* Carousel container */}        <div 
+          className="w-full max-w-[1400px] px-2 sm:px-3 md:px-4 lg:px-20 relative cursor-grab active:cursor-grabbing"          
+          onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           onTouchCancel={handleTouchEnd}
           onMouseDown={handleMouseDown}
           onDragStart={(e) => e.preventDefault()} /* Prevent default drag behavior */
           ref={carouselRef}
-        >
-          {/* Navigation buttons */}
+        >          {/* Navigation buttons */}
           <button 
-            className="absolute z-20 left-1 sm:left-4 top-1/2 -translate-y-1/2 bg-white dark:bg-dark-surface text-palette-2 dark:text-dark-primary p-2 md:p-3 rounded-full shadow-lg hover:bg-palette-5 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-palette-1"
+            className="absolute z-20 left-1 sm:left-4 lg:left-8 top-1/2 -translate-y-1/2 bg-white dark:bg-dark-surface text-palette-2 dark:text-dark-primary p-2 md:p-3 rounded-full shadow-lg hover:bg-palette-5 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-palette-1"
             onClick={goToPrev}
             aria-label="Previous testimonial"
           >
@@ -403,32 +477,56 @@ const Testimonials = () => {
           </button>
           
           <button 
-            className="absolute z-20 right-1 sm:right-4 top-1/2 -translate-y-1/2 bg-white dark:bg-dark-surface text-palette-2 dark:text-dark-primary p-2 md:p-3 rounded-full shadow-lg hover:bg-palette-5 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-palette-1"
+            className="absolute z-20 right-1 sm:right-4 lg:right-8 top-1/2 -translate-y-1/2 bg-white dark:bg-dark-surface text-palette-2 dark:text-dark-primary p-2 md:p-3 rounded-full shadow-lg hover:bg-palette-5 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-palette-1"
             onClick={goToNext}
             aria-label="Next testimonial"
           >
             <FaChevronRight className="w-4 h-4 md:w-6 md:h-6" />
-          </button>
-            {/* Carousel slides */}          <div className="overflow-hidden py-4">            <div 
+          </button>{/* Carousel slides */}          <div className="overflow-visible py-4">            <div 
               className={`flex items-stretch ${!isSwiping ? 'transition-transform duration-500 ease-out' : ''}`}
               style={{ 
                 transform: `translateX(calc(-${currentIndex * 100}% + ${swipeDistance}px))`,
                 touchAction: 'pan-y' /* Allow vertical scrolling but capture horizontal */
               }}
-            >
-              {testimonials.map((testimonial, index) => (                <div 
-                  key={`testimonial-${index}`} 
-                  className={`px-2 sm:px-4 min-w-full transition-all duration-500 flex-shrink-0`}
-                  onClick={() => goToSlide(index)}
-                >
-                  <div className="h-full flex items-stretch">
-                    <TestimonialCard 
-                      {...testimonial} 
-                      isActive={index === currentIndex}
-                    />
+            >              {testimonials.map((testimonial, index) => {
+                // Calculate how far this item is from the current index
+                const distance = Math.abs(index - currentIndex);
+                // Show partial view of prev/next testimonials on desktop
+                const isNeighbor = distance === 1;
+                
+                return (
+                  <div 
+                    key={`testimonial-${index}`} 
+                    className={`px-1 xs:px-2 sm:px-3 min-w-full transition-all duration-500 flex-shrink-0`}
+                    onClick={() => goToSlide(index)}
+                  >
+                    <div className="h-full flex items-center justify-center relative">
+                      {/* On larger screens, show parts of previous and next slides */}
+                      <div className={`
+                        h-full lg:absolute lg:top-0 lg:bottom-0 transition-all duration-500
+                        ${isNeighbor ? 'lg:opacity-100' : 'lg:opacity-0'} 
+                        ${index < currentIndex ? 'lg:-right-16 lg:w-32 lg:z-0' : ''}
+                        ${index > currentIndex ? 'lg:-left-16 lg:w-32 lg:z-0' : ''}
+                        ${index === currentIndex ? 'lg:relative lg:z-10 lg:w-full' : ''}
+                        hidden lg:flex
+                      `}>
+                        {isNeighbor && <div className="w-full h-full opacity-60 hidden lg:block" />}
+                      </div>
+                      
+                      <div className={`
+                        w-full transition-all duration-500
+                        ${index === currentIndex ? 'lg:w-[90%]' : 'lg:w-[25%]'} 
+                        ${isNeighbor ? 'lg:opacity-50 lg:scale-90' : ''}
+                      `}>
+                        <TestimonialCard 
+                          {...testimonial} 
+                          isActive={index === currentIndex}
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
             {/* Dot indicators and swipe hint */}

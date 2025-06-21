@@ -11,6 +11,10 @@ export const navbar = [
     path: 'about',
   },
   {
+    name: 'News',
+    path: 'news',
+  },
+  {
     name: 'Services',
     path: 'services',
   },
@@ -282,8 +286,8 @@ export const contact = [
   {
     name: 'location',
     icon: FaMapMarkerAlt,
-    content: 'Rhij Aesthetics and Skin Care,Cedar Rapids, Iowa ',
-    url: 'https://www.google.com/maps/place/Cedar+Rapids,+IA,+USA/@41.9692625,-91.8290466,11z/data=!3m1!4b1!4m6!3m5!1s0x87e45f7aa02f4251:0x55ee60432ce6ddc0!8m2!3d41.9778795!4d-91.6656232!16zL20vMHQwbjU?entry=ttu&g_ep=EgoyMDI1MDUwNS4wIKXMDSoASAFQAw%3D%3D'
+    content: '1921 51st St NE Suite 4, Cedar Rapids, IA 52402, United States',
+    url: 'https://www.google.com/maps/dir//1921+51st+St+NE+Suite+4,+Cedar+Rapids,+IA+52402,+United+States/@42.0291101,-91.7479493,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87e4f1ffb74c59c5:0x4be463182e5d0dfe!2m2!1d-91.6655485!2d42.0291396?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D'
   },
   {
     name: 'email',
