@@ -5,7 +5,7 @@ import styles from '../styles';
 import { TypingText, TitleText } from "../components";
 import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from 'react-icons/fa';
 
-// Add custom scrollbar styles via CSS-in-JS
+// Add custom scrollbar and text formatting styles via CSS-in-JS
 const customScrollbarStyles = `
   .custom-scrollbar::-webkit-scrollbar {
     width: 4px;
@@ -36,7 +36,49 @@ const customScrollbarStyles = `
   .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #E498A7;
   }
+  /* Text formatting for testimonials */
+  .testimonial-text {
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    text-align: justify;
+    line-height: 1.6;
+  }
+  
+  /* Mobile text optimization */
+  @media (max-width: 640px) {
+    .testimonial-text {
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+      text-align: left;
+      padding: 0 2px;
+      line-height: 1.5;
+    }
+    
+    /* Add automatic soft hyphens for better text wrapping on small screens */
+    .testimonial-text span {
+      display: inline-block;
+      max-width: 100%;
+    }
+  }
 `;
+
+// Format testimonial text for better readability
+const formatTestimonial = (text) => {
+  // Clean up the text first
+  const cleanText = text
+    .replace(/\s+/g, ' ') // Normalize whitespace
+    .trim();
+  
+  // Insert soft hyphens at logical breaking points to help with text wrapping
+  return cleanText
+    // Add a space after punctuation if missing
+    .replace(/([.!?])([A-Z])/g, '$1 $2')
+    // Add a space after emoji sequences if missing
+    .replace(/([\u{1F300}-\u{1F6FF}|[\u{2600}-\u{26FF}])/gu, '$1 ');
+};
 
 const TestimonialCard = ({ name, role, testimonial, profileImage, isActive }) => (  <motion.div
     initial={{ opacity: 0 }}
@@ -45,9 +87,8 @@ const TestimonialCard = ({ name, role, testimonial, profileImage, isActive }) =>
       scale: isActive ? 1 : [0.95, 0.92],
       borderWidth: isActive ? '2px' : '1px'
     }}
-    transition={{ duration: 0.5 }}
-    className={`bg-white dark:bg-dark-surface rounded-lg shadow-lg p-6 md:p-8 mx-2 sm:mx-4 my-4 flex flex-col transform cursor-pointer
-      h-[450px] sm:h-[400px] md:h-[380px] lg:h-[400px] overflow-hidden
+    transition={{ duration: 0.5 }}    className={`bg-white dark:bg-dark-surface rounded-lg shadow-lg p-3 px-2 sm:p-6 md:p-8 mx-1 sm:mx-4 my-4 flex flex-col transform cursor-pointer
+      h-[440px] small-mobile:h-[480px] sm:h-[400px] md:h-[380px] lg:h-[400px] overflow-hidden
       ${isActive 
         ? 'z-10 shadow-xl border-2 border-palette-1 dark:border-dark-primary' 
         : 'border border-gray-200 dark:border-gray-800'}`}
@@ -73,9 +114,14 @@ const TestimonialCard = ({ name, role, testimonial, profileImage, isActive }) =>
     </div>
     <div className="mb-4 text-palette-1 dark:text-dark-primary">
       <FaQuoteLeft className="w-8 h-8" />
-    </div>
-    <div className="flex-grow overflow-y-auto my-2 pr-1 custom-scrollbar">
-      <p className="text-gray-700 dark:text-white text-base md:text-lg">{testimonial}</p>
+    </div>    <div className="flex-grow overflow-y-auto my-2 pr-1 custom-scrollbar">
+      <p className="text-gray-700 dark:text-white text-base md:text-lg testimonial-text">
+        {formatTestimonial(testimonial).split(' ').map((word, i) => (
+          <span key={i} className="inline-block">
+            {word}{' '}
+          </span>
+        ))}
+      </p>
     </div>
     <div className="flex mt-4">
       {[...Array(5)].map((_, i) => (
@@ -87,11 +133,10 @@ const TestimonialCard = ({ name, role, testimonial, profileImage, isActive }) =>
   </motion.div>
 );
 
-const testimonials = [
-  {
+const testimonials = [  {
     name: "Viktoria Angela",
     role: "Regular Client",
-    testimonial: "If you need some self-love and skin care treatment, Rhij Aesthetics should be your go to! Rhij is gentle with your skin. I definitely feel relaxed after my session . 100% recommend 💯💯💯.",
+    testimonial: "If you need some self-love and skin care treatment, Rhij Aesthetics should be your go to! Rhij is gentle with your skin. I definitely feel relaxed after my session. 100% recommend 💯💯💯.",
     profileImage: "/imgs/testimonials/client1.jpg"
   },
   {
@@ -340,10 +385,10 @@ const Testimonials = () => {
         <TitleText title={<>What Our Clients Say</>} textStyles='text-center mb-[30px] md:mb-[50px]' />
           {/* Carousel container */}
         <div 
-          className="w-full max-w-[1400px] px-4 relative cursor-grab active:cursor-grabbing"
-          onTouchStart={handleTouchStart}
+          className="w-full max-w-[1400px] px-4 relative cursor-grab active:cursor-grabbing"          onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
+          onTouchCancel={handleTouchEnd}
           onMouseDown={handleMouseDown}
           onDragStart={(e) => e.preventDefault()} /* Prevent default drag behavior */
           ref={carouselRef}
