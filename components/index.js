@@ -16,6 +16,7 @@ import Footer from './nav/Footer';
 import Picture from './Picture';
 import Preloader from './Preloader';
 import ThemeToggle from './ThemeToggle';
+import MerchandiseCard from './MerchandiseCard';
 
 export {
   Header,
@@ -37,4 +38,5 @@ export {
   Picture,
   Preloader,
   ThemeToggle,
+  MerchandiseCard,
 };

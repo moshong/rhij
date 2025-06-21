@@ -1,7 +1,7 @@
 'use client';
 
 import { Header, Footer, Preloader } from '../components';
-import { Hero, About, Services, Explore, WhyChooseUs, Blog, Reviews, FollowUs, Testimonials } from '../sections';
+import { Hero, About, Services, Explore, WhyChooseUs, Blog, Reviews, FollowUs, Testimonials, Merchandise } from '../sections';
 import { useState, useRef, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import dynamic from 'next/dynamic';
@@ -37,6 +37,7 @@ const Page = () => {
         <Services />
         <WhyChooseUs /> 
         <Explore />
+        <Merchandise />
         {/* <Blog /> */}
         {/* <Reviews /> */}
         <Testimonials />

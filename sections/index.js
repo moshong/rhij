@@ -7,6 +7,7 @@ import Blog from './Blog';
 import FollowUs from './FollowUs';
 import Reviews from './Reviews';
 import Testimonials from './Testimonials';
+import Merchandise from './Merchandise';
 
 export {
   Hero,
@@ -18,4 +19,5 @@ export {
   FollowUs,
   Reviews,
   Testimonials,
+  Merchandise,
 };

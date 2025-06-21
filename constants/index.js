@@ -19,6 +19,10 @@ export const navbar = [
     path: 'gallery',
   },
   {
+    name: 'Merchandise',
+    path: 'merchandise',
+  },
+  {
     name: 'Testimonials',
     path: 'testimonials',
   },
@@ -296,3 +300,44 @@ export const contact = [
 ];
 
 export const disclaimer = "Disclaimer: Our services and products have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease. Information provided is for educational purposes only and not medical advice. Please consult your physician before starting any treatment. All therapies are formulated for healthy adults by Rhij Aesthetics, LLC and any therapy designations are for marketing purposes only.";
+
+export const merchandiseItems = [
+  {
+    id: 'merch-1',
+    title: 'Premium Embroidered Cap',
+    subtitle: 'Adjustable, 100% Cotton',
+    imgUrl: '/Logos/rhij1.jpeg',
+    price: 25.00,
+    category: 'Apparel',
+    colors: ['#D0CAB2', '#92657A', '86785F'],
+    description:  'Stay effortlessly chic with our signature aesthetic clinic cap — where beauty meets comfort. Perfect for post-treatment glow or everyday elegance.',
+  },
+   {
+    id: 'merch-2',
+    title: 'Premium Embroidered Cap',
+    subtitle: 'Adjustable, 100% Cotton',
+    imgUrl: '/Logos/rhij2.jpeg',
+    price: 25.00,
+    category: 'Apparel',
+    colors: ['#D0CAB2', '#92657A', '86785F'],
+    description: 'Show your love for nature with our premium adjustable cap featuring the By The Sea Landscaping logo. Made from 100% breathable cotton, perfect for sunny days in the garden.',
+  },
+   {
+    id: 'merch-3',
+    title: 'Premium Logo Cap',
+    subtitle: 'Adjustable, 100% Cotton',
+    imgUrl: '/Logos/rhij3.jpeg',
+    price: 25.00,
+    category: 'Apparel',
+    colors: ['#D0CAB2', '#92657A', '86785F'],
+    description: 'Bold and stylish, our DTF-printed cap adds a modern edge to your beauty routine — perfect for everyday confidence and flair.',
+  },
+  
+];
+
+// Add merchandise categories
+export const merchandiseCategories = [
+  { name: 'All', value: 'all' },
+  { name: 'Apparel', value: 'Apparel' }
+  
+];
