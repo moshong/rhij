@@ -336,12 +336,56 @@ export const merchandiseItems = [
     colors: ['#D0CAB2', '#92657A', '86785F'],
     description: 'Bold and stylish, our DTF-printed cap adds a modern edge to your beauty routine — perfect for everyday confidence and flair.',
   },
-  
+  {
+    id: 'skincare-1',
+    title: 'Rhij Aesthetics Plumping Peptide Lip Gloss',
+    subtitle: 'with Peppermint, Vitamin E & Blackberry',
+    imgUrl: '/Logos/lip.jpeg',
+    price: 18.00,
+    category: 'Skincare',
+    description: 'Get fuller, softer lips with a high-shine gloss that does more than just look pretty. Infused with peptides to support natural collagen, peppermint oil for a refreshing tingle and instant plump, vitamin E to nourish, and blackberry extract for antioxidant protection. Wear it alone or over your favorite lip color for a juicy finish. 💄 Plumps & hydrates 🍃 Fresh peppermint tingle 🍇 Antioxidant-rich shine with a hint of berry',
+  },
+  {
+    id: 'skincare-2',
+    title: 'Rhij Aesthetics Brightening Face Serum',
+    subtitle: 'with Green Tea, Lemon Balm, Resveratrol & Alpha Arbutin',
+    imgUrl: '/Logos/face.jpg',
+    price: 28.00,
+    category: 'Skincare',
+    description: 'Reveal your skin’s natural radiance with this antioxidant-rich brightening serum. Powered by green tea and lemon balm to calm and protect, resveratrol to fight environmental stressors, and alpha arbutin to target dark spots and even out skin tone. Lightweight, fast-absorbing, and gentle enough for daily use. 🍋 Fades dark spots & hyperpigmentation 🌿 Calms redness and inflammation ✨ Boosts glow and clarity without irritation',
+  },
+  {
+    id: 'skincare-3',
+    title: 'Rhij Aesthetics Advanced Eye Serum',
+    subtitle: 'with Vitamin K, Peptides & Fruit Extracts',
+    imgUrl: '/Logos/eyeserum.jpeg',
+    price: 28.00,
+    category: 'Skincare',
+    description: 'A targeted treatment designed to visibly reduce dark circles, puffiness, and fine lines around the delicate eye area. Formulated with Vitamin K to brighten and improve circulation, skin-loving peptides to support firmness, and a blend of antioxidant-rich fruit extracts to nourish and protect. 🍇 Brightens tired eyes 💪 Firms & smooths fine lines 🌿 Gentle yet powerful for daily use',
+  },
+  {
+    id: 'skincare-4',
+    title: 'Rhij Aesthetics Hydrating Face Moisturizer',
+    subtitle: 'with Aloe, Chamomile & Hyaluronic Acid',
+    imgUrl: '/Logos/moisturizer.jpeg',
+    price: 35.00,
+    category: 'Skincare',
+    description: "A lightweight, non-greasy moisturizer that delivers deep hydration and lasting comfort. Powered by hyaluronic acid to lock in moisture, aloe vera to soothe and cool, and chamomile extract to calm sensitive or irritated skin. Leaves your skin feeling soft, smooth, and balanced—never heavy or sticky. \n🌿 Calms & hydrates stressed skin \n💧 Boosts moisture retention \n✨ Ideal for all skin types, especially sensitive or dry",
+  },
+  {
+    id: 'skincare-5',
+    title: 'Rhij Aesthetics Cucumber Daily Cleanser',
+    subtitle: 'with Niacinamide & White Willow Bark',
+    imgUrl: '/Logos/cucumber.jpeg',
+    price: 28.00,
+    category: 'Skincare',
+    description: ' refreshing, gentle foaming cleanser that calms, clears, and balances. Infused with cucumber extract for soothing hydration, niacinamide to brighten and refine pores, and white willow bark (a natural source of salicylic acid) to gently exfoliate and clarify. Perfect for daily use and all skin types—especially oily, combination, or breakout-prone skin.  \n🧼 Cleanse without stripping 🌱 Calm redness & irritation \n ✨ Reveal clearer, brighter skin',
+  }
 ];
 
 // Add merchandise categories
 export const merchandiseCategories = [
   { name: 'All', value: 'all' },
-  { name: 'Apparel', value: 'Apparel' }
-  
+  { name: 'Apparel', value: 'Apparel' },
+  { name: 'Skincare', value: 'Skincare' }
 ];

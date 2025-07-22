@@ -1,0 +1,9 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="80" fill="#FF9A8B" />
+  <circle cx="100" cy="100" r="70" fill="#fff" />
+  <circle cx="100" cy="100" r="60" fill="#E7879B" />
+  <text x="100" y="90" font-family="Arial" font-size="24" text-anchor="middle" fill="white">MUNCHI</text>
+  <text x="100" y="120" font-family="Arial" font-size="20" text-anchor="middle" fill="white">MOCHI</text>
+  <circle cx="100" cy="150" r="10" fill="#fff" />
+  <text x="100" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="#fff">DONUTS</text>
+</svg>

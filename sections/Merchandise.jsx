@@ -215,19 +215,21 @@ const Merchandise = () => {
                     <p className="text-gray-600 dark:text-gray-300">{selectedItem.description}</p>
                   </div>
                   
-                  <div className="mt-6">
-                    <h3 className="font-medium text-gray-800 dark:text-white mb-2">Available Colors</h3>
-                    <div className="flex gap-2">
-                      {selectedItem.colors.map((color, i) => (
-                        <div 
-                          key={i} 
-                          className="w-8 h-8 rounded-full border border-gray-300 cursor-pointer"
-                          style={{ backgroundColor: color }}
-                          title={`Color option ${i+1}`}
-                        />
-                      ))}
+                  {selectedItem.colors && (
+                    <div className="mt-6">
+                      <h3 className="font-medium text-gray-800 dark:text-white mb-2">Available Colors</h3>
+                      <div className="flex gap-2">
+                        {selectedItem.colors.map((color, i) => (
+                          <div 
+                            key={i} 
+                            className="w-8 h-8 rounded-full border border-gray-300 cursor-pointer"
+                            style={{ backgroundColor: color }}
+                            title={`Color option ${i+1}`}
+                          />
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                   
                   <div className="mt-8">
                     <button 
