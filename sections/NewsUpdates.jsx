@@ -119,7 +119,7 @@ const NewsUpdates = () => {
                   className="w-20 h-20 relative"
                 >
                   <Image 
-                    src="/Logos/lv_photography_logo.png" 
+                    src="/Logos/lv.jpg" 
                     alt="LV Photography" 
                     width={80} 
                     height={80}
@@ -132,7 +132,7 @@ const NewsUpdates = () => {
                   className="w-20 h-20 relative"
                 >
                   <Image 
-                    src="/Logos/muriel_miller_logo.png" 
+                    src="/Logos/muriel.jpg" 
                     alt="Muriel Miller Designs & Gatherings" 
                     width={80} 
                     height={80}
