@@ -12,13 +12,13 @@ const NewsUpdates = () => {
   const [showRSVP, setShowRSVP] = useState(false);
 
   return (
-    <section className={`${styles.paddings} relative z-10 bg-palette-5 dark:bg-dark-bg`} id='news'>
+    <section className={`px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative z-10 bg-palette-5 dark:bg-dark-bg`} id='news'>
       <motion.div
         variants={staggerContainer}
         initial='hidden'
         whileInView='show'
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col`}
+        className={`max-w-6xl mx-auto flex flex-col`}
       >
       <TypingText title='| Latest News' textStyles='text-center' />
       <TitleText title='News & Updates' textStyles='text-center' />
@@ -26,15 +26,15 @@ const NewsUpdates = () => {
       {/* The Glow Edit Event Card */}
       <motion.div
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="mt-[50px] md:mt-[70px] bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto"
+        className="mt-8 sm:mt-12 md:mt-16 bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto"
       >
         <div className="flex flex-col md:flex-row">
           {/* Event Image */}
           <div className="w-full md:w-2/5 relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-palette-2 dark:bg-dark-primary text-white z-10 py-2 px-4 rounded-bl-lg font-bold">
+            <div className="absolute top-0 right-0 bg-palette-2 dark:bg-dark-primary text-white z-10 py-2 px-4 rounded-bl-lg font-bold text-xs sm:text-sm">
               November 8, 2025
             </div>
-            <div className="w-full h-64 md:h-full relative">
+            <div className="w-full h-48 sm:h-56 md:h-full min-h-[200px] relative">
               <Image 
                 src="/Logos/glowedit_event.jpg" 
                 alt="The Glow Edit Open House" 
@@ -46,18 +46,18 @@ const NewsUpdates = () => {
           </div>
           
           {/* Event Details */}
-          <div className="w-full md:w-3/5 p-6 md:p-8">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 font-heading text-palette-2 dark:text-dark-primary">
+          <div className="w-full md:w-3/5 p-4 sm:p-6 md:p-8">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 font-heading text-palette-2 dark:text-dark-primary">
               ✨ THE GLOW EDIT ✨ Open House
             </h3>
             
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-3 sm:mb-4">
               Join us for a one-of-a-kind open house in collaboration with LV Photography and Muriel Miller Designs & Gatherings! A beautiful afternoon filled with glow, style, and creativity.
             </p>
             
-            <div className="bg-palette-5/20 dark:bg-dark-primary/10 p-4 rounded-lg mb-4">
-              <h4 className="font-bold text-palette-2 dark:text-dark-primary mb-2">What to Expect:</h4>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+            <div className="bg-palette-5/20 dark:bg-dark-primary/10 p-3 sm:p-4 rounded-lg mb-3 sm:mb-4">
+              <h4 className="font-bold text-palette-2 dark:text-dark-primary mb-2 text-sm sm:text-base">What to Expect:</h4>
+              <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
                 <li className="flex items-start">
                   <span className="mr-2">💝</span>
                   <span>FREE The Glow Edit goody bag for the first 30 guests</span>
@@ -85,38 +85,38 @@ const NewsUpdates = () => {
               </ul>
             </div>
             
-            <div className="bg-palette-2/10 dark:bg-dark-primary/10 p-4 rounded-lg mb-4">
-              <h4 className="font-bold text-palette-2 dark:text-dark-primary mb-2">📅 Event Details:</h4>
-              <p className="text-gray-700 dark:text-gray-300">
+            <div className="bg-palette-2/10 dark:bg-dark-primary/10 p-3 sm:p-4 rounded-lg mb-3 sm:mb-4">
+              <h4 className="font-bold text-palette-2 dark:text-dark-primary mb-2 text-sm sm:text-base">📅 Event Details:</h4>
+              <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">
                 <strong>When:</strong> Saturday, November 8, 2025 | 1–5 PM<br/>
                 <strong>Where:</strong> Rhij Aesthetics, Cedar Rapids, IA<br/>
-                <span className="text-sm">1921 51st St Suite 4 Cedar Rapids, Iowa 52402</span>
+                <span className="text-xs">1921 51st St Suite 4 Cedar Rapids, Iowa 52402</span>
               </p>
             </div>
             
-            <div className="text-center mb-4">
+            <div className="text-center mb-3 sm:mb-4">
               <button 
                 onClick={() => setShowRSVP(true)}
-                className="inline-block bg-palette-2 hover:bg-palette-1 dark:bg-dark-primary dark:hover:bg-dark-secondary text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                className="inline-block bg-palette-2 hover:bg-palette-1 dark:bg-dark-primary dark:hover:bg-dark-secondary text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base"
               >
                 RSVP Now
               </button>
             </div>
             
-            <p className="text-palette-2 dark:text-dark-primary text-sm font-medium">
+            <p className="text-palette-2 dark:text-dark-primary text-xs sm:text-sm font-medium">
               #TheGlowEdit #RhijAesthetics #CedarRapidsEvent
             </p>
             
             {/* Partner Logos */}
-            <div className="mt-6">
-              <h4 className="text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">
+            <div className="mt-4 sm:mt-6">
+              <h4 className="text-xs sm:text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3 sm:mb-4">
                 In collaboration with
               </h4>
               
-              <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-4 sm:space-x-6">
                 <motion.div 
                   variants={zoomIn(0.3, 0.7)}
-                  className="w-20 h-20 relative"
+                  className="w-16 h-16 sm:w-20 sm:h-20 relative"
                 >
                   <Image 
                     src="/Logos/lv.jpg" 
@@ -129,7 +129,7 @@ const NewsUpdates = () => {
                 
                 <motion.div 
                   variants={zoomIn(0.5, 0.7)}
-                  className="w-20 h-20 relative"
+                  className="w-16 h-16 sm:w-20 sm:h-20 relative"
                 >
                   <Image 
                     src="/Logos/muriel.jpg" 
@@ -148,15 +148,15 @@ const NewsUpdates = () => {
       {/* New Product Alert Card */}
       <motion.div
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="mt-[50px] md:mt-[70px] bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto"
+        className="mt-8 sm:mt-12 md:mt-16 bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto"
       >
         <div className="flex flex-col md:flex-row">
           {/* Product Image */}
           <div className="w-full md:w-2/5 relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-palette-2 dark:bg-dark-primary text-white z-10 py-2 px-4 rounded-bl-lg font-bold">
+            <div className="absolute top-0 right-0 bg-palette-2 dark:bg-dark-primary text-white z-10 py-2 px-4 rounded-bl-lg font-bold text-xs sm:text-sm">
               July 15, 2025
             </div>
-            <div className="w-full h-64 md:h-full relative">
+            <div className="w-full h-48 sm:h-56 md:h-full min-h-[200px] relative">
               <Image 
                 src="/Logos/newproductalert.jpeg" 
                 alt="New Skincare Line" 
@@ -168,22 +168,22 @@ const NewsUpdates = () => {
           </div>
           
           {/* Product Details */}
-          <div className="w-full md:w-3/5 p-6 md:p-8">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 font-heading text-palette-2 dark:text-dark-primary">
+          <div className="w-full md:w-3/5 p-4 sm:p-6 md:p-8">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 font-heading text-palette-2 dark:text-dark-primary">
               🧴✨ NEW PRODUCT ALERT ✨🧴
             </h3>
             
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-3 sm:mb-4">
               We're beyond excited to officially announce that… Rhij Aesthetics LLC now has our very own skincare line! 💕🌿
             </p>
             
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-3 sm:mb-4">
               Formulated with intention. Backed by science. Created with your glow in mind.
               From our treatment room to your daily routine — we're bringing you clean, effective, and results-driven skincare made to elevate your self-care.
             </p>
             
-            <div className="bg-palette-5/20 dark:bg-dark-primary/10 p-4 rounded-lg mb-4">
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+            <div className="bg-palette-5/20 dark:bg-dark-primary/10 p-3 sm:p-4 rounded-lg mb-3 sm:mb-4">
+              <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
                 <li className="flex items-start">
                   <span className="mr-2">🇺🇸</span>
                   <span>Proudly Made in the USA</span>
@@ -199,7 +199,7 @@ const NewsUpdates = () => {
               </ul>
             </div>
             
-            <p className="text-palette-2 dark:text-dark-primary text-sm font-medium">
+            <p className="text-palette-2 dark:text-dark-primary text-xs sm:text-sm font-medium">
               #RhijGlow #RhijSkincare #NewProductDrop #FilipinaOwnedBeauty #MadeInUSA
             </p>
           </div>
@@ -209,15 +209,15 @@ const NewsUpdates = () => {
       {/* Soft Launch Event Card */}
       <motion.div
         variants={fadeIn('up', 'tween', 0.4, 1)}
-        className="mt-[30px] md:mt-[50px] bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto"
+        className="mt-8 sm:mt-12 md:mt-16 bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto"
       >
         <div className="flex flex-col md:flex-row">
           {/* Event Image */}
           <div className="w-full md:w-2/5 relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-palette-2 dark:bg-dark-primary text-white z-10 py-2 px-4 rounded-bl-lg font-bold">
+            <div className="absolute top-0 right-0 bg-palette-2 dark:bg-dark-primary text-white z-10 py-2 px-4 rounded-bl-lg font-bold text-xs sm:text-sm">
               July 6, 2025
             </div>
-            <div className="w-full h-64 md:h-full relative">
+            <div className="w-full h-48 sm:h-56 md:h-full min-h-[200px] relative">
               <Image 
                 src="/Logos/rhijopenning.jpeg" 
                 alt="Soft Launch Event" 
@@ -229,37 +229,37 @@ const NewsUpdates = () => {
           </div>
           
           {/* Event Details */}
-          <div className="w-full md:w-3/5 p-6 md:p-8">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 font-heading text-palette-2 dark:text-dark-primary">
+          <div className="w-full md:w-3/5 p-4 sm:p-6 md:p-8">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 font-heading text-palette-2 dark:text-dark-primary">
               Soft Launch – Private Event Only 🎀
             </h3>
             
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-3 sm:mb-4">
               Rhij Aesthetics is celebrating its soft launch with an exclusive invite-only event on July 6 — featuring sweet collaborations with Munchi Mochi Donuts and Chocolates de Chaveleta.
             </p>
             
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-3 sm:mb-4">
               ✨ VIP treatments, elevated self-care, and handcrafted local treats await our special guests.
             </p>
             
-            <p className="text-gray-700 dark:text-gray-300 font-bold mb-6">
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-bold mb-4 sm:mb-6">
               Private event by invitation only.
             </p>
             
-            <p className="text-palette-2 dark:text-dark-primary text-sm font-medium">
+            <p className="text-xs sm:text-sm text-palette-2 dark:text-dark-primary font-medium">
               #RhijAesthetics #PrivateSoftLaunch #SupportLocal
             </p>
             
             {/* Partner Logos */}
-            <div className="mt-6">
-              <h4 className="text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">
+            <div className="mt-4 sm:mt-6">
+              <h4 className="text-xs sm:text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3 sm:mb-4">
                 In collaboration with
               </h4>
               
-              <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-4 sm:space-x-6">
                 <motion.div 
                   variants={zoomIn(0.3, 0.7)}
-                  className="w-20 h-20 relative"
+                  className="w-16 h-16 sm:w-20 sm:h-20 relative"
                 >
                   <Image 
                     src="/Logos/munchi_logo.jpeg" 
@@ -272,7 +272,7 @@ const NewsUpdates = () => {
                 
                 <motion.div 
                   variants={zoomIn(0.5, 0.7)}
-                  className="w-20 h-20 relative"
+                  className="w-16 h-16 sm:w-20 sm:h-20 relative"
                 >
                   <Image 
                     src="/Logos/chaveleta_logo.jpeg" 
