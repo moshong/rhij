@@ -17,6 +17,7 @@ import Picture from './Picture';
 import Preloader from './Preloader';
 import ThemeToggle from './ThemeToggle';
 import MerchandiseCard from './MerchandiseCard';
+import RSVPModal from './RSVPModal';
 
 export {
   Header,
@@ -39,4 +40,5 @@ export {
   Preloader,
   ThemeToggle,
   MerchandiseCard,
+  RSVPModal,
 };
