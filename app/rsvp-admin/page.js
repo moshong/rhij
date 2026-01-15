@@ -13,7 +13,7 @@ export default function RSVPAdmin() {
 
   const fetchSubmissions = async () => {
     try {
-      const response = await fetch('/api/rsvp-list');
+      const response = await fetch('/api/rsvp-list-sheets');
       const data = await response.json();
       
       if (data.success) {

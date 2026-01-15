@@ -368,14 +368,16 @@ const Merchandise = () => {
                     <p>Total</p>
                     <p>${totalPrice.toFixed(2)}</p>
                   </div>                  <div className="mt-6">
-                    <button
-                      className="w-full bg-palette-2 hover:bg-palette-1 dark:bg-dark-primary dark:hover:bg-dark-secondary text-white px-6 py-3 rounded-lg font-medium transition-colors"
-                      onClick={() => setShowCart(false)}
+                    <a
+                      href="https://checkout.square.site/merchant/MLRH4AJK21GTM/checkout/L5Q2Q4E6E7XEKGH33F32BRQS"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full bg-palette-2 hover:bg-palette-1 dark:bg-dark-primary dark:hover:bg-dark-secondary text-white px-6 py-3 rounded-lg font-medium transition-colors text-center uppercase"
                     >
-                      Available soon, DM on Facebook to order
-                    </button>
+                      Add to Cart
+                    </a>
                     <p className="text-center text-xs mt-2 text-gray-600 dark:text-gray-400">
-                      Online checkout coming soon! Message us on Facebook to place your order.
+                      Secure checkout powered by Square
                     </p>
                   </div>
                   <div className="mt-2 text-center">

@@ -29,8 +29,8 @@ const RSVPModal = ({ isOpen, onClose, eventTitle = "The Glow Edit Open House" })
     setSubmitError('');
 
     try {
-      // Try the RSVP API first
-      let response = await fetch('/api/rsvp', {
+      // Try the Google Sheets RSVP API first
+      let response = await fetch('/api/rsvp-sheets', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,8 +50,8 @@ const RSVPModal = ({ isOpen, onClose, eventTitle = "The Glow Edit Open House" })
           throw new Error(result.message || 'Failed to submit RSVP');
         }
       } else {
-        // If RSVP API fails, use the contact form API as backup
-        console.log('RSVP API failed, using contact form as backup');
+        // If Google Sheets RSVP API fails, use the contact form API as backup
+        console.log('Google Sheets RSVP API failed, using contact form as backup');
         
         const rsvpMessage = `
 🎉 RSVP SUBMISSION FOR ${eventTitle.toUpperCase()} 🎉

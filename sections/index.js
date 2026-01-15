@@ -1,5 +1,6 @@
 import Hero from './Hero';
 import About from './About';
+import Awards from './Awards';
 import NewsUpdates from './NewsUpdates';
 import Services from './Services';
 import WhyChooseUs from './WhyChooseUs';
@@ -13,6 +14,7 @@ import Merchandise from './Merchandise';
 export {
   Hero,
   About,
+  Awards,
   NewsUpdates,
   Services,
   Explore,

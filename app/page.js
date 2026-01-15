@@ -1,7 +1,7 @@
 'use client';
 
 import { Header, Footer, Preloader } from '../components';
-import { Hero, About, NewsUpdates, Services, Explore, WhyChooseUs, Blog, Reviews, FollowUs, Testimonials, Merchandise } from '../sections';
+import { Hero, About, Awards, NewsUpdates, Services, Explore, WhyChooseUs, Blog, Reviews, FollowUs, Testimonials, Merchandise } from '../sections';
 import { useState, useRef, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import dynamic from 'next/dynamic';
@@ -33,6 +33,7 @@ const Page = () => {
       <div className="text-gray-500 dark:text-dark-text font-sans" ref={pageRef}>        <Header setOverlay={() => setOverlay(!overlay)}/>
         <Hero />
         <About />
+        <Awards />
         <NewsUpdates />
         <Services />
         <WhyChooseUs /> 
