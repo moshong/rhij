@@ -18,6 +18,7 @@ import Preloader from './Preloader';
 import ThemeToggle from './ThemeToggle';
 import MerchandiseCard from './MerchandiseCard';
 import RSVPModal from './RSVPModal';
+import CherryWidget from './CherryWidget';
 
 export {
   Header,
@@ -41,4 +42,5 @@ export {
   ThemeToggle,
   MerchandiseCard,
   RSVPModal,
+  CherryWidget,
 };

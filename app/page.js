@@ -1,6 +1,6 @@
 'use client';
 
-import { Header, Footer, Preloader } from '../components';
+import { Header, Footer, Preloader, CherryWidget } from '../components';
 import { Hero, About, Awards, NewsUpdates, Services, Explore, WhyChooseUs, Blog, Reviews, FollowUs, Testimonials, Merchandise } from '../sections';
 import { useState, useRef, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
@@ -37,6 +37,7 @@ const Page = () => {
         <NewsUpdates />
         <Services />
         <WhyChooseUs /> 
+        <CherryWidget />
         <Explore />
         <Merchandise />
         {/* <Blog /> */}
