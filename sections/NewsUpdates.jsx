@@ -23,6 +23,79 @@ const NewsUpdates = () => {
       <TypingText title='| Latest News' textStyles='text-center' />
       <TitleText title='News & Updates' textStyles='text-center' />
       
+      {/* Two Years in Bloom Event Card */}
+      <motion.div
+        variants={fadeIn('up', 'tween', 0.2, 1)}
+        className="mt-8 sm:mt-12 md:mt-16 bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto border-2 border-pink-200 dark:border-pink-800"
+      >
+        <div className="flex flex-col md:flex-row">
+          {/* Event Image */}
+          <div className="w-full md:w-2/5 relative overflow-hidden">
+            <div className="absolute top-0 right-0 bg-rose-500 dark:bg-rose-600 text-white z-10 py-2 px-4 rounded-bl-lg font-bold text-xs sm:text-sm">
+              April 11, 2026
+            </div>
+            <div className="w-full h-48 sm:h-56 md:h-full min-h-[240px] relative">
+              <Image
+                src="/imgs/2nd_anniv.jpg"
+                alt="Two Years in Bloom – Rhij Aesthetics Anniversary Soirée"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            </div>
+          </div>
+
+          {/* Event Details */}
+          <div className="w-full md:w-3/5 p-4 sm:p-6 md:p-8">
+            <div className="inline-block bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-300 text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+              Upcoming Event
+            </div>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 font-heading text-rose-500 dark:text-rose-400">
+              🌸 TWO YEARS IN BLOOM 🌸
+            </h3>
+            <p className="text-sm sm:text-base font-semibold text-amber-700 dark:text-amber-400 mb-3">
+              Celebrating 2 Years of Rhij Aesthetics — Anniversary Soirée
+            </p>
+
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-3 sm:mb-4">
+              An afternoon of beauty, blooms, and community. Join us as we celebrate two incredible years and toast to all the glow that's to come!
+            </p>
+
+            <div className="bg-rose-50 dark:bg-rose-900/20 p-3 sm:p-4 rounded-lg mb-3 sm:mb-4">
+              <h4 className="font-bold text-rose-500 dark:text-rose-400 mb-2 text-sm sm:text-base">✨ What to Expect:</h4>
+              <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+                <li className="flex items-start"><span className="mr-2">🍹</span><span>Cocktails</span></li>
+                <li className="flex items-start"><span className="mr-2">🥂</span><span>Light Bites</span></li>
+                <li className="flex items-start"><span className="mr-2">🎁</span><span>Giveaways</span></li>
+                <li className="flex items-start"><span className="mr-2">🎉</span><span>Celebration</span></li>
+              </ul>
+            </div>
+
+            <div className="bg-amber-50 dark:bg-amber-900/20 p-3 sm:p-4 rounded-lg mb-4 sm:mb-5">
+              <h4 className="font-bold text-amber-700 dark:text-amber-400 mb-2 text-sm sm:text-base">📅 Event Details:</h4>
+              <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+                <strong>When:</strong> Saturday, April 11, 2026 | 2–5 PM CST<br/>
+                <strong>Where:</strong> Cedar Rapids, Iowa<br/>
+                <span className="italic text-xs">More details to follow.</span>
+              </p>
+            </div>
+
+            <div className="text-center mb-3 sm:mb-4">
+              <button
+                onClick={() => setShowRSVP(true)}
+                className="inline-block bg-rose-500 hover:bg-rose-600 dark:bg-rose-600 dark:hover:bg-rose-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base"
+              >
+                RSVP Now
+              </button>
+            </div>
+
+            <p className="text-rose-400 dark:text-rose-400 text-xs sm:text-sm font-medium">
+              #TwoYearsInBloom #RhijAesthetics #AnniversarySoiree #CedarRapidsIowa
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
       {/* The Glow Edit Event Card */}
       <motion.div
         variants={fadeIn('up', 'tween', 0.2, 1)}
