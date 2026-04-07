@@ -76,7 +76,7 @@ const Awards = () => {
               </div>
 
               <p className='text-center mt-8 text-gray-600 dark:text-gray-400 italic'>
-                Ranked <strong>#1</strong> on Google for March 2026 — a milestone made possible by your incredible support and reviews. 💛
+                Ranked <strong>#1</strong> Medical Spa in Cedar Rapids for March 2026. Thank you to every client who shared their experience and trusted us with their glow.
               </p>
             </div>
           </div>
