@@ -34,10 +34,10 @@ const Awards = () => {
           <div className='bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 p-1 rounded-xl shadow-2xl max-w-4xl w-full'>
             <div className='bg-white dark:bg-dark-bg p-8 lg:p-12 rounded-xl'>
               <h3 className='text-2xl lg:text-3xl font-bold text-amber-600 dark:text-amber-400 mb-2'>
-                🏆 #1 Business Rating — March 2026
+                🏆#1 Medical Spa in Cedar Rapids — March 2026
               </h3>
               <p className='text-gray-600 dark:text-gray-400 mb-6 text-sm sm:text-base'>
-                Rhij Aesthetics ranked <strong>#1 Top Rated Business</strong> on Google for March 2026. Thank you to every client who shared their experience and trusted us with their glow!
+                Rhij Aesthetics ranked <strong>#1 Medical Spa in Cedar Rapids</strong> for March 2026. Thank you to every client who shared their experience and trusted us with their glow!
               </p>
 
               <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6'>
