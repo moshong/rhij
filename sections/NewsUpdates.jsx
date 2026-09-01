@@ -14,15 +14,91 @@ const NewsUpdates = () => {
   return (
     <section className={`px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative z-10 bg-palette-5 dark:bg-dark-bg`} id='news'>
       <motion.div
-        variants={staggerContainer}
+        variants={staggerContainer()}
         initial='hidden'
         whileInView='show'
-        viewport={{ once: false, amount: 0.25 }}
+        viewport={{ once: false, amount: 0 }}
         className={`max-w-6xl mx-auto flex flex-col`}
       >
       <TypingText title='| Latest News' textStyles='text-center' />
       <TitleText title='News & Updates' textStyles='text-center' />
-      
+
+      {/* Advanced Training Announcement Card */}
+      <motion.div
+        variants={fadeIn('up', 'tween', 0.2, 1)}
+        className="mt-8 sm:mt-12 md:mt-16 bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto border-2 border-palette-1 dark:border-dark-primary"
+      >
+        <div className="flex flex-col md:flex-row">
+          {/* Training Images Grid */}
+          <div className="w-full md:w-2/5 relative overflow-hidden">
+            <div className="absolute top-0 right-0 bg-palette-1 dark:bg-dark-primary text-white z-10 py-2 px-4 rounded-bl-lg font-bold text-xs sm:text-sm">
+              Professional Development
+            </div>
+            <div className="grid grid-cols-2 gap-1 p-2 bg-gray-100 dark:bg-gray-800 min-h-[200px] sm:min-h-[280px] md:min-h-[300px]">
+              <div className="col-span-2 relative h-24 xs:h-28 sm:h-32 md:h-40">
+                <Image
+                  src="/imgs/nl1.jpeg"
+                  alt="National Laser Institute Training - Neurotoxins and Fillers"
+                  fill
+                  className="object-cover rounded-lg"
+                />
+              </div>
+              <div className="relative h-16 xs:h-20 sm:h-24 md:h-28">
+                <Image
+                  src="/imgs/nl2.jpeg"
+                  alt="Advanced Training Session"
+                  fill
+                  className="object-cover rounded-lg"
+                />
+              </div>
+              <div className="relative h-16 xs:h-20 sm:h-24 md:h-28">
+                <Image
+                  src="/imgs/nl3.jpeg"
+                  alt="Professional Education"
+                  fill
+                  className="object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Training Details */}
+          <div className="w-full md:w-3/5 p-4 sm:p-6 md:p-8">
+            <div className="inline-block bg-palette-1/10 dark:bg-dark-primary/20 text-palette-1 dark:text-dark-primary text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+              Continuing Education
+            </div>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 font-heading text-palette-1 dark:text-dark-primary">
+              ✨ AN UPDATE FROM RHIJ AESTHETICS ✨
+            </h3>
+
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-3 sm:mb-4 font-semibold">
+              Advanced Hands-On Training in Neurotoxins & Dermal Fillers
+            </p>
+
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-3 sm:mb-4">
+              Our owner and Medical Director, Rhij, recently completed advanced hands-on training in neurotoxins and dermal fillers at the National Laser Institute in Chicago, learning from some of the industry's leading professionals.
+            </p>
+
+            <div className="bg-palette-5/30 dark:bg-dark-primary/10 p-3 sm:p-4 rounded-lg mb-3 sm:mb-4">
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-3">
+                At Rhij Aesthetics, we believe there is always more to learn. Continuing education and hands-on training are among the most important investments we make—not only to expand our services, but to deepen our understanding of facial anatomy, refine our techniques, and continue providing safe, thoughtful, high-quality care.
+              </p>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-semibold text-palette-1 dark:text-dark-primary">
+                And this training means one exciting thing… More services are coming soon to Rhij Aesthetics. 🤍✨
+              </p>
+            </div>
+
+            <p className="text-palette-1 dark:text-dark-primary text-sm sm:text-base font-bold">
+              We can't wait to share what's next! 💉✨
+            </p>
+
+            <p className="text-palette-1 dark:text-dark-primary text-xs sm:text-sm font-medium mt-4">
+              #RhijAesthetics #ContinuingEducation #NationalLaserInstitute #NewServices #MedicalAesthetics
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
       {/* Two Years in Bloom Event Card */}
       <motion.div
         variants={fadeIn('up', 'tween', 0.2, 1)}

@@ -26,6 +26,50 @@ const Awards = () => {
           <TitleText title={<>Award-Winning Excellence</>} />
         </motion.div>
 
+        {/* CommunityVotes 2026 Awards — Bronze & Silver, latest, shown first */}
+        <motion.div
+          variants={fadeIn('up', 'tween', 0.25, 1)}
+          className='flex flex-col items-center gap-6 mt-8'
+        >
+          <div className='bg-gradient-to-r from-slate-400 via-gray-300 to-slate-400 p-1 rounded-xl shadow-2xl max-w-4xl w-full'>
+            <div className='bg-white dark:bg-dark-bg p-8 lg:p-12 rounded-xl'>
+              <h3 className='text-2xl lg:text-3xl font-bold text-slate-600 dark:text-slate-300 mb-2'>
+                🥉🥈 CommunityVotes 2026 Winner
+              </h3>
+              <p className='text-gray-600 dark:text-gray-400 mb-6 text-sm sm:text-base'>
+                Rhij Aesthetics won <strong>Bronze</strong> for Beauty and Health Spa, and <strong>Silver</strong> for Medical Aesthetics in the 2026 CommunityVotes awards. Thank you for your continued support!
+              </p>
+
+              <div className='flex flex-wrap items-center justify-center gap-6 mt-6'>
+                <motion.div variants={fadeIn('right', 'tween', 0.4, 1)} className='relative group'>
+                  <iframe
+                    width='200'
+                    height='200'
+                    frameBorder='0'
+                    style={{ border: 0 }}
+                    scrolling='no'
+                    allowtransparency='true'
+                    title='CommunityVotes Bronze Award – Beauty and Health Spa'
+                    src='https://communityvotes.com/plugins/winners-badge/criff/8vkdk6x9g2f6x7p7q6'
+                  />
+                </motion.div>
+                <motion.div variants={fadeIn('left', 'tween', 0.4, 1)} className='relative group'>
+                  <iframe
+                    width='200'
+                    height='200'
+                    frameBorder='0'
+                    style={{ border: 0 }}
+                    scrolling='no'
+                    allowtransparency='true'
+                    title='CommunityVotes Silver Award – Medical Aesthetics'
+                    src='https://communityvotes.com/plugins/winners-badge/criff/8vkdk6q7gmt7f27d7p'
+                  />
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Top 1 Business Rate March 2026 — latest, shown first */}
         <motion.div
           variants={fadeIn('up', 'tween', 0.3, 1)}
@@ -76,7 +120,7 @@ const Awards = () => {
               </div>
 
               <p className='text-center mt-8 text-gray-600 dark:text-gray-400 italic'>
-                Ranked <strong>#1</strong> Medical Spa in Cedar Rapids for March 2026. Thank you to every client who shared their experience and trusted us with their glow.
+                Ranked <strong>#1</strong> Medical Spa in Cedar Rapids for March 2026! Another milestone made possible by your incredible support and reviews. 💛
               </p>
             </div>
           </div>

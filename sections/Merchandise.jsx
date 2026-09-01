@@ -11,6 +11,8 @@ const Merchandise = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [cartItems, setCartItems] = useState([]);
   const [showCart, setShowCart] = useState(false);
+  const [isCheckingOut, setIsCheckingOut] = useState(false);
+  const [checkoutError, setCheckoutError] = useState(null);
   const scrollContainerRef = useRef(null);
 
   // Filter merchandise items by category
@@ -48,6 +50,38 @@ const Merchandise = () => {
 
   const removeFromCart = (itemId) => {
     setCartItems(cartItems.filter(item => item.id !== itemId));
+  };
+
+  const handleCheckout = async () => {
+    if (cartItems.length === 0 || isCheckingOut) return;
+
+    setIsCheckingOut(true);
+    setCheckoutError(null);
+
+    try {
+      // Only send item id + quantity - price/title are looked up server-side
+      // from the canonical catalog so the amount charged can't be tampered with.
+      const payload = {
+        cartItems: cartItems.map(({ id, quantity }) => ({ id, quantity })),
+      };
+
+      const response = await fetch('/api/square-checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || 'Unable to start checkout.');
+      }
+
+      window.location.href = data.checkoutUrl;
+    } catch (error) {
+      setCheckoutError(error.message || 'Something went wrong. Please try again.');
+      setIsCheckingOut(false);
+    }
   };
 
   const scroll = (direction) => {
@@ -367,15 +401,21 @@ const Merchandise = () => {
                   <div className="flex justify-between text-lg font-bold text-gray-800 dark:text-white">
                     <p>Total</p>
                     <p>${totalPrice.toFixed(2)}</p>
-                  </div>                  <div className="mt-6">
-                    <a
-                      href="https://checkout.square.site/merchant/MLRH4AJK21GTM/checkout/L5Q2Q4E6E7XEKGH33F32BRQS"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full bg-palette-2 hover:bg-palette-1 dark:bg-dark-primary dark:hover:bg-dark-secondary text-white px-6 py-3 rounded-lg font-medium transition-colors text-center uppercase"
+                  </div>
+                  <div className="mt-6">
+                    {checkoutError && (
+                      <p className="text-center text-sm text-red-600 dark:text-red-400 mb-2">
+                        {checkoutError}
+                      </p>
+                    )}
+                    <button
+                      type="button"
+                      onClick={handleCheckout}
+                      disabled={isCheckingOut}
+                      className="block w-full bg-palette-2 hover:bg-palette-1 dark:bg-dark-primary dark:hover:bg-dark-secondary text-white px-6 py-3 rounded-lg font-medium transition-colors text-center uppercase disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      Add to Cart
-                    </a>
+                      {isCheckingOut ? 'Redirecting…' : 'Checkout'}
+                    </button>
                     <p className="text-center text-xs mt-2 text-gray-600 dark:text-gray-400">
                       Secure checkout powered by Square
                     </p>

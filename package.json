@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.17.10",
     "@tailwindcss/forms": "^0.5.3",
     "@vercel/analytics": "^1.0.1",
     "eslint-config-next": "13.0.3",
@@ -22,6 +23,7 @@
     "react-responsive": "^9.0.2",
     "react-scroll": "^1.8.9",
     "react-swipeable": "^7.0.1",
+    "three": "^0.169.0",
     "yup": "^1.2.0"
   },
   "devDependencies": {

@@ -458,16 +458,20 @@ const Testimonials = () => {
         className={`mx-auto flex flex-col items-center w-full`}
       >
         <TypingText title='| Client Stories' textStyles='text-center' />
-        <TitleText title={<>What Our Clients Say</>} textStyles='text-center mb-[30px] md:mb-[50px]' />          {/* Carousel container */}        <div 
-          className="w-full max-w-[1400px] px-2 sm:px-3 md:px-4 lg:px-20 relative cursor-grab active:cursor-grabbing"          
+        <TitleText title={<>What Our Clients Say</>} textStyles='text-center mb-[30px] md:mb-[50px]' />
+
+        {/* Carousel container */}
+        <div
+          className="w-full max-w-[1400px] px-2 sm:px-3 md:px-4 lg:px-20 relative cursor-grab active:cursor-grabbing"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           onTouchCancel={handleTouchEnd}
           onMouseDown={handleMouseDown}
-          onDragStart={(e) => e.preventDefault()} /* Prevent default drag behavior */
+          onDragStart={(e) => e.preventDefault()}
           ref={carouselRef}
-        >          {/* Navigation buttons */}
+        >
+          {/* Navigation buttons */}
           <button 
             className="absolute z-20 left-1 sm:left-4 lg:left-8 top-1/2 -translate-y-1/2 bg-white dark:bg-dark-surface text-palette-2 dark:text-dark-primary p-2 md:p-3 rounded-full shadow-lg hover:bg-palette-5 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-palette-1"
             onClick={goToPrev}
@@ -482,7 +486,11 @@ const Testimonials = () => {
             aria-label="Next testimonial"
           >
             <FaChevronRight className="w-4 h-4 md:w-6 md:h-6" />
-          </button>{/* Carousel slides */}          <div className="overflow-visible py-4">            <div 
+          </button>
+
+          {/* Carousel slides */}
+          <div className="overflow-visible py-4">
+            <div 
               className={`flex items-stretch ${!isSwiping ? 'transition-transform duration-500 ease-out' : ''}`}
               style={{ 
                 transform: `translateX(calc(-${currentIndex * 100}% + ${swipeDistance}px))`,
@@ -529,7 +537,8 @@ const Testimonials = () => {
               })}
             </div>
           </div>
-            {/* Dot indicators and swipe hint */}
+
+          {/* Dot indicators and swipe hint */}
           <div className="flex flex-col items-center mt-4 md:mt-8">
             <div className="flex justify-center">
               {testimonials.map((_, index) => (
