@@ -15,11 +15,11 @@ const styles = {
 
     // hero section
     heroHeading:
-        'font-playfair font-bold italic text-[35px] mobile:text-[40px] md:text-[60px] xl:text-[80px] short:leading-[80px] sm:leading-[60px] md:leading-[100px] lg:leading-[120px] text-palette-5',
+        'font-sans font-medium uppercase tracking-[0.35em] text-[12px] md:text-[14px] text-palette-5/90 mb-2',
     heroText:
         'xl:w-[400px] md:w-[350px] sm:w-[300px] mobile:w-[70vw] font-playfair font-light xl:text-[24px] md:text-[20px] sm:text-[18px] text-[18px] lg:leading-[40px] md:leading-[32px] sm:leading-[24px] text-palette-5',
     heroBtn:
-        'font-dancing font-medium border-[1px] py-4 px-6 rounded-lg border-palette-5 xl:text-[28px] md:text-[24px] sm:text-[20px] text-[20px] text-palette-5 hover:bg-palette-5 hover:text-palette-1 active:scale-95 transition duration-500',
+        'font-sans font-medium uppercase tracking-[0.2em] border-[1px] py-4 px-8 rounded-full border-palette-5 text-[13px] md:text-[14px] text-palette-5 hover:bg-palette-5 hover:text-[#2B2220] active:scale-95 transition duration-300',
 
     // footer section
 

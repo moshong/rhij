@@ -1,16 +1,18 @@
 'use client';
 
+import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 import { GrClose } from 'react-icons/gr';
 import { FaPhoneAlt } from 'react-icons/fa';
 import Image from 'next/image';
-import { ThemeToggle } from '../../components';
+import { ThemeToggle, BookingModal } from '../../components';
 import { navbar, socials } from '../../constants';
 import styles from '../../styles';
 
 const SideBar = ({ active, handleClick }) => {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
+  const [booking, setBooking] = useState(false);
 
   return (
     <div className="z-50">
@@ -73,14 +75,14 @@ const SideBar = ({ active, handleClick }) => {
           </div>
           <div>
             <h4>Book Now</h4>
-            <a 
-              href="https://book.carepatron.com/Rhij-Aesthetics-and-Skin-Care/Rhij?p=PKRmBx5QS4CLC2nWnCR2Jg&s=Q7znKVgM"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => setBooking(true)}
               className="text-xl font-bold hover:text-palette-2 transition duration-300"
             >
               Click Here
-            </a>
+            </button>
+            <BookingModal open={booking} onClose={() => setBooking(false)} />
           </div>
         </div>
 

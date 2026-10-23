@@ -1,16 +1,13 @@
-import { BsCheck2 } from 'react-icons/bs';
-import styles from '../styles';
-
-const Guarantee = ({ title, text }) => (
-  <div className={`${styles.flexCenter} flex-row flex-1 py-[20px]`}>
-    <div className={`${styles.flexCenter} w-[70px] h-[70px] rounded-full bg-[#3CAB80] opacity-[0.8]`}>
-      <BsCheck2 size={40} color="#fff" />
-    </div>
-    <div className="flex flex-col flex-1 ml-4 sm:ml-8">
-      <h3 className="md:text-[20px] sm:text-[18px] text-[18px] text-[#1c6758] font-bold text-palette-2 pb-[15px]">
+const Guarantee = ({ title, text, index }) => (
+  <div className="flex flex-row gap-6 py-6 border-t border-[#2B2220]/10 dark:border-white/10">
+    <span className="font-playfair text-[28px] leading-none text-palette-2 w-10 shrink-0">
+      {String(index + 1).padStart(2, '0')}
+    </span>
+    <div className="flex flex-col flex-1">
+      <h3 className="font-playfair text-[20px] text-[#2B2220] dark:text-white pb-2">
         {title}
       </h3>
-      <p className="font-normal text-[16px]">
+      <p className="font-normal text-[15px] leading-7">
         {text}
       </p>
     </div>

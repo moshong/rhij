@@ -47,6 +47,7 @@ export const WhyChooseUs = () => {
             {guarantee.map((item, index) => (
               <Guarantee
                 key={index}
+                index={index}
                 title={item.title}
                 text={item.text}
               />

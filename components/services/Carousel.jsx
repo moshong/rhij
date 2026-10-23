@@ -25,8 +25,8 @@ const Carousel = (props) => {
                   className="w-[70px] h-[70px] object-contain"
                 />
                 <div className="flex flex-col ml-4">
-                  <h3 className="font-bold text-palette-2">{item.subtitle}</h3>
-                  <h4 className="font-bold text-[22px] mobile:text-[28px]">{item.title}</h4>
+                  <h3 className="font-semibold text-[13px] uppercase tracking-[0.2em] text-palette-2">{item.subtitle}</h3>
+                  <h4 className="font-playfair font-medium text-[24px] mobile:text-[32px] text-[#2B2220] dark:text-white">{item.title}</h4>
                 </div>
               </div>
               <div className="flex flex-col gap-4">
@@ -36,7 +36,7 @@ const Carousel = (props) => {
               </div>
               <div className="hidden md:flex flex-wrap justify-center gap-4">
                 {item.tags.map((tag, index) => (
-                  <div className="py-2 px-4 text-[14px] text-palette-2 font-bold border-1 border-palette-2 rounded-full" key={index}>{tag}</div>
+                  <div className="py-2 px-4 text-[13px] text-palette-2 font-medium border-1 border-palette-2 rounded-full" key={index}>{tag}</div>
                 ))}
               </div>
             </div>

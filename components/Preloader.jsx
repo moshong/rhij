@@ -15,7 +15,7 @@ const Preloader = () => {
     setMounted(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);

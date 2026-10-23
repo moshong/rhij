@@ -32,6 +32,17 @@ export const navbar = [
   },
 ]
 
+export const providers = [
+  {
+    name: 'Rhij, ARNP',
+    href: 'https://book.carepatron.com/Rhij-Aesthetics/Rhij?p=PKRmBx5QS4CLC2nWnCR2Jg&s=Q7znKVgM',
+  },
+  {
+    name: 'Sofia, LE',
+    href: 'https://book.carepatron.com/Rhij-Aesthetics/Sofia?p=PKRmBx5QS4CLC2nWnCR2Jg&s=y6oWJveD',
+  },
+]
+
 export const heroBtns = [
   {
     name: 'Our Treatments',
@@ -39,12 +50,45 @@ export const heroBtns = [
   },
   {
     name: 'Book Now',
-    path: 'https://book.carepatron.com/Rhij-Aesthetics-and-Skin-Care/Rhij?p=PKRmBx5QS4CLC2nWnCR2Jg&s=Q7znKVgM',
-    external: true,
+    booking: true,
   },
 ]
 
 export const services = [
+  {
+    icon: {
+      img: '/imgs/letybo.png',
+      alt: 'Letybo Neurotoxin Image',
+    },
+    img: '/imgs/hero-pattern-5',
+    alt: 'Letybo neurotoxin treatment',
+    subtitle: "South Korea's #1 Neurotoxin",
+    title: 'Letybo Neurotoxin',
+    text: "We're excited to offer Letybo, a leading neurotoxin in South Korea and now FDA-approved for aesthetic use in the United States. With years of international clinical use, Letybo is designed to temporarily soften the appearance of expression lines while maintaining a natural, refreshed look.\n At Rhij Aesthetics, every treatment begins with a personalized consultation and careful facial assessment. Our approach focuses on precise placement, balanced results, and enhancing your natural features, never making you look overdone or frozen. Think smoother lines, a refreshed appearance, and results that still look like you.\n Common treatment areas may include frown lines between the brows, forehead lines, and crow's feet. Results develop gradually after treatment and are temporary, so maintenance treatments may be recommended based on your individual response. Consultation required to determine whether Letybo is appropriate for you.",
+    tags: [
+      'Frown Lines',
+      'Forehead Lines',
+      "Crow's Feet",
+      'Natural Results',
+    ]
+  },
+  {
+    icon: {
+      img: '/imgs/skinfill.png',
+      alt: 'SkinFill BACIO Lip Treatment Image',
+    },
+    img: '/imgs/hero-pattern-5',
+    alt: 'SkinFill BACIO lip treatment',
+    subtitle: 'New Lip Treatment',
+    title: 'SkinFill BACIO',
+    text: 'Introducing SkinFill BACIO, our newest lip treatment at Rhij Aesthetics! Designed to enhance lip hydration and refine definition for a naturally refreshed look. 💋\n Introductory package: 3 sessions for $600. Additional sessions may be purchased after completing your initial 3-session package.\n Because beautiful lips deserve a little extra love.',
+    tags: [
+      'Lip Hydration',
+      'Refined Definition',
+      '3 Sessions for $600',
+      'Natural Look',
+    ]
+  },
   {
     icon: {
       img: '/imgs/facial.png',

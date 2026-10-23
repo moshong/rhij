@@ -1,6 +1,7 @@
 'use client';
 
 import { Header, Footer, Preloader, CherryWidget } from '../components';
+import Ticker from '../components/Ticker';
 import { Hero, About, Awards, NewsUpdates, Services, Explore, WhyChooseUs, Blog, Reviews, FollowUs, Testimonials, Merchandise } from '../sections';
 import { useState, useRef, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
@@ -32,6 +33,7 @@ const Page = () => {
      
       <div className="text-gray-500 dark:text-dark-text font-sans" ref={pageRef}>        <Header setOverlay={() => setOverlay(!overlay)}/>
         <Hero />
+        <Ticker />
         <About />
         <Awards />
         <NewsUpdates />

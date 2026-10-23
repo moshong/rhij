@@ -26,16 +26,14 @@ const About = () => {
               webp="/imgs/about-sc.png"
               src="/imgs/about-sc.png"
               alt="About section screenshot"
-              className="relative w-full lg:max-w-[400px] xl:max-w-[500px] min-h-[600px] h-full object-cover object-cover z-40 lg:rounded-lg shadow-xl"
+              className="relative w-full lg:max-w-[400px] xl:max-w-[500px] min-h-[600px] h-full object-cover object-cover z-40 lg:rounded-sm"
             />
             <QuoteCard
               text="Dedicated to enhancing your natural beauty with personalized care and premium treatments."
               styles="lg:hidden"
             />
             <div className='hidden lg:block'>
-              <div className='absolute -top-[50px] -left-[50px] h-full w-full bg-palette-1 shadow-2xl z-0' />
-              <div className='absolute -bottom-4 -right-4 h-full w-full bg-palette-5 z-20' />
-              <div className='absolute -bottom-[50px] -right-[50px] h-full w-full border-4 border-palette-1 z-10' />
+              <div className='absolute top-6 left-6 h-full w-full border border-palette-2 z-0' />
             </div>
           </motion.div>
 
@@ -52,10 +50,6 @@ const About = () => {
             </motion.div>
 
             <div className='flex flex-col gap-8'>
-              <p className={`font-normal text-[16px] leading-7`}>
-                Welcome to <span className=''>Rhij Aesthetics</span>
-              </p>
-
               <p className={`font-normal text-[16px] leading-7`}>
                 At Rhij Aesthetics, we combine advanced medical training with a personalized approach to wellness and aesthetics. Founded and led by a board-certified Family Nurse Practitioner, our clinic offers medically supervised IV vitamin therapy, intramuscular wellness injections, and aesthetic services such as Korean luxury facials, Diamond glow facial, underarm diamond peel and more.
               </p>

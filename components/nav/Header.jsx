@@ -3,13 +3,14 @@ import { useState } from 'react';
 import { Link } from 'react-scroll';
 import Image from 'next/image';
 import SideBar from './SideBar';
-import { ThemeToggle } from '../../components';
+import { ThemeToggle, BookingModal } from '../../components';
 import { navbar } from '../../constants';
 import { useScrollDirection } from '../../utils/hooks';
 
 const Header = ({ setOverlay }) => {
   const [active, setActive] = useState(false);
   const [hidden, setHidden] = useState(true);
+  const [booking, setBooking] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   const scrollDirection = useScrollDirection();
 
@@ -68,16 +69,15 @@ const Header = ({ setOverlay }) => {
             <div className="flex flex-row gap-12 items-center">
               <ThemeToggle />
 
-              <a
-                href="https://book.carepatron.com/Rhij-Aesthetics-and-Skin-Care/Rhij?p=PKRmBx5QS4CLC2nWnCR2Jg&s=Q7znKVgM"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
                 aria-label="Book now"
+                onClick={() => setBooking(true)}
+                className="hidden md:flex font-bold text-palette-5 text-[12px] sm:text-[14px] px-8 py-4 border-[1px] border-palette-5 rounded-full hover:bg-palette-5 hover:text-palette-1/[.85] transition duration-300"
               >
-                <button type="button" className="hidden md:flex font-bold text-palette-5 text-[12px] sm:text-[14px] px-8 py-4 border-[1px] border-palette-5 rounded-full hover:bg-palette-5 hover:text-palette-1/[.85] transition duration-300">
-                  BOOK NOW
-                </button>
-              </a>
+                BOOK NOW
+              </button>
+              <BookingModal open={booking} onClose={() => setBooking(false)} />
 
               <div>
                 <SideBar

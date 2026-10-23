@@ -43,14 +43,15 @@ module.exports = {
         'out-flex': 'cubic-bezier(0.05, 0.6, 0.4, 0.9)',
       },
       fontFamily: {
-        sans: ['Inter', 'Arial', 'sans-serif'],
+        sans: ['Quicksand', 'Inter', 'Arial', 'sans-serif'],
         serif: ['Playfair Display', 'Georgia', 'serif'],
         heading: ['Playfair Display', 'Georgia', 'serif'],
-        body: ['Inter', 'Arial', 'sans-serif'],
+        body: ['Quicksand', 'Inter', 'Arial', 'sans-serif'],
         roboto: ['Roboto', 'Arial', 'sans-serif'],
         lato: ['Lato', 'Arial', 'sans-serif'],
         abril: ['Abril Fatface', 'Arial', 'cursive'],
         playfair: ['Playfair Display', 'serif'],
+        cormorant: ['Cormorant Garamond', 'Georgia', 'serif'],
         dancing: ['Dancing Script', 'cursive'],
       },
       backgroundImage: {

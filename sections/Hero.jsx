@@ -1,14 +1,15 @@
+import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { motion } from 'framer-motion';
 import styles from '../styles';
 import { staggerContainer, textVariant } from '../utils/motion'
-import { Picture } from '../components';
+import { Picture, BookingModal } from '../components';
 import { Link } from 'react-scroll';
 import { heroBtns } from '../constants';
-import { TypingText } from '../components/CustomTexts';
 
 const Hero = () => {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
+  const [booking, setBooking] = useState(false);
 
   return (
     <section className={`relative sm:pl-16 pl-6 w-full bg-palette-5`} id='home'>
@@ -28,7 +29,7 @@ const Hero = () => {
               className="object-cover w-full h-full brightness-[0.65]"
             />
           </picture>
-          <div className="absolute inset-0 bg-gradient-to-t from-palette-1/70 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
         </div>
 
         <div className='flex flex-col items-left justify-end gap-10 pb-[200px] relative z-10 short:gap-6 short:pb-0'>
@@ -36,25 +37,27 @@ const Hero = () => {
             <motion.h1 variants={textVariant(0.1)} className={styles.heroHeading}>
               Welcome to 
             </motion.h1>
-            <TypingText 
-              title="Rhij Aesthetics." 
-              textStyles={`font-dancing font-bold !text-white !text-[45px] mobile:!text-[55px] md:!text-[75px] xl:!text-[95px] !leading-[120px]`} 
-            />
+            <motion.p
+              variants={textVariant(0.4)}
+              className="soft-float font-cormorant font-light italic text-white text-[52px] mobile:text-[64px] md:text-[88px] xl:text-[112px] leading-[1.05] tracking-tight"
+            >
+              Rhij Aesthetics.
+            </motion.p>
           </div>
           <motion.p variants={textVariant(0.7)} className={styles.heroText}>
             Discover a world of personalized treatment and relaxation.
           </motion.p>
           <motion.div variants={textVariant(1)} className='flex flex-col small-mobile:flex-row gap-2 mobile:gap-6'>
-            {heroBtns.map(({name, path, external}, i) => (
-              external ? (
-                <a 
-                  href={path}
+            {heroBtns.map(({name, path, booking: isBooking}, i) => (
+              isBooking ? (
+                <button
                   key={name}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  type="button"
+                  className={styles.heroBtn}
+                  onClick={() => setBooking(true)}
                 >
-                  <button className={styles.heroBtn}>{name}</button>
-                </a>
+                  {name}
+                </button>
               ) : (
                 <Link
                   activeClass='active'
@@ -74,6 +77,7 @@ const Hero = () => {
         </div>
 
       </motion.div>
+      <BookingModal open={booking} onClose={() => setBooking(false)} />
     </section>
   );
 };

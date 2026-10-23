@@ -19,8 +19,10 @@ import ThemeToggle from './ThemeToggle';
 import MerchandiseCard from './MerchandiseCard';
 import RSVPModal from './RSVPModal';
 import CherryWidget from './CherryWidget';
+import BookingModal from './BookingModal';
 
 export {
+  BookingModal,
   Header,
   SideBar,
   TitleText,

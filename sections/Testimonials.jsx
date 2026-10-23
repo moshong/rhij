@@ -154,59 +154,45 @@ const formatTestimonial = (text) => {
 };
 
 const TestimonialCard = ({ name, role, testimonial, profileImage, isActive }) => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ 
-      opacity: 1,
-      scale: isActive ? 1 : [0.95, 0.92],
-      borderWidth: isActive ? '2px' : '1px'
-    }}
-    transition={{ duration: 0.5 }}
-    className={`testimonial-card bg-white dark:bg-dark-surface rounded-lg shadow-lg p-3 px-2 sm:p-5 md:p-6 mx-0.5 sm:mx-3 md:mx-4 my-2 sm:my-4 flex flex-col transform cursor-pointer
-      h-[430px] small-mobile:h-[450px] xs:h-[420px] sm:h-[400px] md:h-[380px] lg:h-[400px] overflow-hidden w-full
-      ${isActive 
-        ? 'z-10 shadow-xl border-2 border-palette-1 dark:border-dark-primary' 
-        : 'border border-gray-200 dark:border-gray-800'}`}
+  <div
+    className={`flex flex-col h-[400px] sm:h-[380px] lg:h-[360px] w-full rounded-sm p-7 sm:p-9 transition-all duration-700
+      ${isActive
+        ? 'bg-white dark:bg-dark-surface shadow-[0_20px_50px_-20px_rgba(43,34,32,0.25)]'
+        : 'bg-white/60 dark:bg-dark-surface/60'}`}
   >
-    <div className="testimonial-header flex items-center mb-3 sm:mb-4 justify-center sm:justify-start">
+    <div className="flex items-center gap-4">
       {profileImage ? (
-        <div className="testimonial-avatar w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-palette-1 dark:border-dark-primary">
-          <img 
-            src={profileImage} 
-            alt={`${name}'s profile`} 
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <img
+          src={profileImage}
+          alt={`${name}'s profile`}
+          className="w-12 h-12 rounded-full object-cover"
+        />
       ) : (
-        <div className="testimonial-avatar w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-palette-2 flex items-center justify-center text-white font-bold text-lg md:text-xl border-2 border-palette-1 dark:border-dark-primary">
+        <div className="w-12 h-12 rounded-full bg-palette-3/60 flex items-center justify-center text-[#2B2220] font-cormorant font-semibold text-xl">
           {name.charAt(0)}
         </div>
       )}
-      <div className="ml-2 sm:ml-3 md:ml-4">
-        <h4 className="testimonial-name font-bold text-base sm:text-lg dark:text-white font-heading text-center sm:text-left">{name}</h4>
-        <p className="testimonial-role text-gray-600 dark:text-gray-300 text-xs sm:text-sm text-center sm:text-left">{role}</p>
+      <div className="flex flex-col min-w-0">
+        <h4 className="font-cormorant text-[22px] font-semibold leading-tight text-[#2B2220] dark:text-white truncate">{name}</h4>
+        {role && <p className="text-[12px] uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400 truncate">{role}</p>}
+      </div>
+      <div className="ml-auto flex gap-[2px] text-palette-2 dark:text-dark-primary" aria-label="5 out of 5 stars">
+        {[...Array(5)].map((_, i) => (
+          <svg key={i} className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
       </div>
     </div>
-    <div className="testimonial-quote mb-2 sm:mb-3 md:mb-4 text-palette-1 dark:text-dark-primary flex justify-center sm:justify-start">
-      <FaQuoteLeft className="testimonial-quote-icon w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
-    </div>    <div className="testimonial-text-container flex-grow overflow-y-auto my-1 sm:my-2 pr-1 custom-scrollbar">
-      <p className="text-gray-700 dark:text-white text-sm sm:text-base md:text-lg testimonial-text px-1">
-        {formatTestimonial(testimonial).split('\n').map((line, i) => (
-          <React.Fragment key={i}>
-            {line}
-            {i < formatTestimonial(testimonial).split('\n').length - 1 && <br />}
-          </React.Fragment>
-        ))}
+
+    <span aria-hidden="true" className="font-cormorant text-[64px] leading-[0.7] mt-6 text-palette-1 dark:text-dark-primary select-none">&ldquo;</span>
+
+    <div className="flex-grow overflow-y-auto mt-3 pr-3 custom-scrollbar">
+      <p className="text-[15px] sm:text-[16px] leading-[1.8] text-gray-700 dark:text-gray-200">
+        {testimonial.replace(/s+/g, ' ').trim()}
       </p>
     </div>
-    <div className="flex mt-2 sm:mt-3 md:mt-4 star-rating justify-center sm:justify-start">
-      {[...Array(5)].map((_, i) => (
-        <svg key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-    </div>
-  </motion.div>
+  </div>
 );
 
 const testimonials = [  {
@@ -258,6 +244,9 @@ const testimonials = [  {
     profileImage: "/imgs/testimonials/client8.jpg"
   }
 ];
+
+const DESKTOP_CARD = 560;
+const DESKTOP_GAP = 32;
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -406,7 +395,7 @@ const Testimonials = () => {
   };
   
   // Track screen size for responsive behavior
-  const [visibleItems, setVisibleItems] = useState(getVisibleItemCount());
+  const [visibleItems, setVisibleItems] = useState(1);
   
   useEffect(() => {
     const handleResize = () => {
@@ -428,6 +417,7 @@ const Testimonials = () => {
       }
     };
   }, []);
+  const isDesktop = visibleItems === 3;
   // Inject custom scrollbar styles
   useEffect(() => {
     // Check if the style element already exists
@@ -462,7 +452,7 @@ const Testimonials = () => {
 
         {/* Carousel container */}
         <div
-          className="w-full max-w-[1400px] px-2 sm:px-3 md:px-4 lg:px-20 relative cursor-grab active:cursor-grabbing"
+          className="w-full max-w-[1400px] px-2 sm:px-3 md:px-4 lg:px-0 relative cursor-grab active:cursor-grabbing"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -473,65 +463,47 @@ const Testimonials = () => {
         >
           {/* Navigation buttons */}
           <button 
-            className="absolute z-20 left-1 sm:left-4 lg:left-8 top-1/2 -translate-y-1/2 bg-white dark:bg-dark-surface text-palette-2 dark:text-dark-primary p-2 md:p-3 rounded-full shadow-lg hover:bg-palette-5 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-palette-1"
+            className="absolute z-20 left-1 sm:left-4 lg:left-[calc(50%-420px)] top-1/2 -translate-y-1/2 bg-white dark:bg-dark-surface text-[#2B2220] dark:text-dark-primary w-11 h-11 flex items-center justify-center rounded-full shadow-md hover:bg-palette-2 hover:text-white transition duration-300 focus:outline-none"
             onClick={goToPrev}
             aria-label="Previous testimonial"
           >
-            <FaChevronLeft className="w-4 h-4 md:w-6 md:h-6" />
+            <FaChevronLeft className="w-3.5 h-3.5" />
           </button>
           
           <button 
-            className="absolute z-20 right-1 sm:right-4 lg:right-8 top-1/2 -translate-y-1/2 bg-white dark:bg-dark-surface text-palette-2 dark:text-dark-primary p-2 md:p-3 rounded-full shadow-lg hover:bg-palette-5 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-palette-1"
+            className="absolute z-20 right-1 sm:right-4 lg:right-[calc(50%-420px)] top-1/2 -translate-y-1/2 bg-white dark:bg-dark-surface text-[#2B2220] dark:text-dark-primary w-11 h-11 flex items-center justify-center rounded-full shadow-md hover:bg-palette-2 hover:text-white transition duration-300 focus:outline-none"
             onClick={goToNext}
             aria-label="Next testimonial"
           >
-            <FaChevronRight className="w-4 h-4 md:w-6 md:h-6" />
+            <FaChevronRight className="w-3.5 h-3.5" />
           </button>
 
           {/* Carousel slides */}
-          <div className="overflow-visible py-4">
-            <div 
-              className={`flex items-stretch ${!isSwiping ? 'transition-transform duration-500 ease-out' : ''}`}
-              style={{ 
-                transform: `translateX(calc(-${currentIndex * 100}% + ${swipeDistance}px))`,
-                touchAction: 'pan-y' /* Allow vertical scrolling but capture horizontal */
+          <div className="overflow-hidden lg:[mask-image:linear-gradient(to_right,transparent,black_14%,black_86%,transparent)] py-4">
+            <div
+              className={`flex items-stretch ${!isSwiping ? 'transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]' : ''}`}
+              style={{
+                transform: isDesktop
+                  ? `translateX(calc(50% - ${DESKTOP_CARD / 2}px - ${currentIndex * (DESKTOP_CARD + DESKTOP_GAP)}px + ${swipeDistance}px))`
+                  : `translateX(calc(-${currentIndex * 100}% + ${swipeDistance}px))`,
+                touchAction: 'pan-y',
               }}
-            >              {testimonials.map((testimonial, index) => {
-                // Calculate how far this item is from the current index
+            >
+              {testimonials.map((testimonial, index) => {
                 const distance = Math.abs(index - currentIndex);
-                // Show partial view of prev/next testimonials on desktop
-                const isNeighbor = distance === 1;
-                
                 return (
-                  <div 
-                    key={`testimonial-${index}`} 
-                    className={`px-1 xs:px-2 sm:px-3 min-w-full transition-all duration-500 flex-shrink-0`}
+                  <div
+                    key={`testimonial-${index}`}
+                    className="min-w-full lg:min-w-0 lg:flex-none px-1 sm:px-3 lg:px-0 transition-all duration-700"
+                    style={isDesktop ? {
+                      width: DESKTOP_CARD,
+                      marginRight: DESKTOP_GAP,
+                      opacity: distance === 0 ? 1 : distance === 1 ? 0.55 : 0.25,
+                      transform: distance === 0 ? 'scale(1)' : 'scale(0.94)',
+                    } : undefined}
                     onClick={() => goToSlide(index)}
                   >
-                    <div className="h-full flex items-center justify-center relative">
-                      {/* On larger screens, show parts of previous and next slides */}
-                      <div className={`
-                        h-full lg:absolute lg:top-0 lg:bottom-0 transition-all duration-500
-                        ${isNeighbor ? 'lg:opacity-100' : 'lg:opacity-0'} 
-                        ${index < currentIndex ? 'lg:-right-16 lg:w-32 lg:z-0' : ''}
-                        ${index > currentIndex ? 'lg:-left-16 lg:w-32 lg:z-0' : ''}
-                        ${index === currentIndex ? 'lg:relative lg:z-10 lg:w-full' : ''}
-                        hidden lg:flex
-                      `}>
-                        {isNeighbor && <div className="w-full h-full opacity-60 hidden lg:block" />}
-                      </div>
-                      
-                      <div className={`
-                        w-full transition-all duration-500
-                        ${index === currentIndex ? 'lg:w-[90%]' : 'lg:w-[25%]'} 
-                        ${isNeighbor ? 'lg:opacity-50 lg:scale-90' : ''}
-                      `}>
-                        <TestimonialCard 
-                          {...testimonial} 
-                          isActive={index === currentIndex}
-                        />
-                      </div>
-                    </div>
+                    <TestimonialCard {...testimonial} isActive={index === currentIndex} />
                   </div>
                 );
               })}
@@ -545,10 +517,7 @@ const Testimonials = () => {
                 <button
                   key={`dot-${index}`}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 md:w-4 md:h-4 mx-1 rounded-full transition-all duration-200 focus:outline-none
-                    ${index === currentIndex 
-                      ? 'bg-palette-2 dark:bg-dark-primary scale-125' 
-                      : 'bg-gray-300 dark:bg-gray-600 hover:bg-palette-3 dark:hover:bg-dark-secondary'}`}
+                  className={`h-[6px] mx-1 rounded-full transition-all duration-500 focus:outline-none ${index === currentIndex ? 'w-8 bg-palette-2 dark:bg-dark-primary' : 'w-[6px] bg-[#2B2220]/20 dark:bg-gray-600 hover:bg-palette-3'}`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
